@@ -206,7 +206,7 @@
                     Hi, I'm <span class="accent-color">Akshay Joshi</span>
                 </h1>
                 <p class="subtitle-paragraph text-xl md:text-3xl font-medium text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="200">
-                    <span id="typed-subtitle"></span> </p>
+                    <span id="typed-role"></span> <span class="static-subtitle"> | Specializing in Scalable Data Pipelines and Machine Learning Integration</span> </p>
                 <div data-aos="fade-up" data-aos-delay="400">
                     <a href="#projects" class="bg-accent-color text-gray-900 font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-accent-dark hover:text-white transition duration-300 inline-block mr-4 mb-4">
                         View My Work
@@ -535,26 +535,23 @@
             once: true, // Whether animation should happen only once - while scrolling down
         });
 
-        // Initialize Typed.js for the subtitle
-        var typedOptions = {
+        // Initialize Typed.js for the looping roles
+        var typedRoleOptions = {
             strings: [
-                "Data Engineer", // First string
-                "Data Engineer | Specializing in Scalable Data Pipelines and Machine Learning Integration" // Second string (full title)
+                "Data Engineer",
+                "BI Engineer",
+                "Data Scientist",
+                "ML Engineer"
                 ],
-            typeSpeed: 50, // Speed of typing
-            backSpeed: 25, // Speed of backspacing (used if backspacing is needed)
+            typeSpeed: 60, // Speed of typing
+            backSpeed: 40, // Speed of backspacing
             startDelay: 500, // Delay before typing starts
-            backDelay: 1500, // Delay before backspacing (if looping or deleting)
-            smartBackspace: true, // Only backspace what doesn't match the next string
-            loop: false, // Don't loop the animation
+            backDelay: 2000, // Pause after typing each role
+            loop: true, // Loop the animation infinitely
             showCursor: true, // Show the blinking cursor
             cursorChar: '|', // Cursor character
-            onComplete: (self) => {
-                // Optional: Hide cursor when animation is complete
-                 self.cursor.style.display = 'none';
-            }
         };
-        var typed = new Typed('#typed-subtitle', typedOptions);
+        var typedRole = new Typed('#typed-role', typedRoleOptions); // Target the new span
 
 
         // Set current year in footer
