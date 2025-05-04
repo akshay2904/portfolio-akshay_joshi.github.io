@@ -84,13 +84,37 @@
             border: 1px solid #2a2a2a; /* Dark Gray border */
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2); /* Darker shadow */
             transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            overflow: hidden;
+            overflow: hidden; /* Important for positioning icon */
+            position: relative; /* Needed for absolute positioning of icon */
         }
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3); /* Enhanced dark shadow */
             border-color: #0ea5e9; /* Sky-500 on hover */
         }
+        /* Container for card text content */
+        .card-content {
+            position: relative; /* Ensure text is above the icon */
+            z-index: 10;
+            padding: 1.5rem; /* p-6 */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+             background-color: rgba(17, 17, 17, 0.85); /* Slightly stronger overlay for better readability over icon */
+        }
+        /* Background Icon Styling */
+        .card-bg-icon {
+            position: absolute;
+            bottom: -20px; /* Position partially off-bottom */
+            right: -20px; /* Position partially off-right */
+            font-size: 8rem; /* Large icon size */
+            color: #0ea5e9; /* Accent color */
+            opacity: 0.08; /* Very faint */
+            z-index: 1; /* Behind text content */
+            pointer-events: none; /* Icon doesn't interfere with clicks */
+             transform: rotate(-15deg); /* Slight rotation */
+        }
+
 
         /* Mobile Nav */
         .mobile-nav {
@@ -153,8 +177,9 @@
 
         /* Project Tags */
         .project-tag {
-            background-color: #1e3a8a; /* Dark Blue */
-            color: #bfdbfe; /* Light Blue */
+            background-color: rgba(30, 58, 138, 0.8); /* Darker Blue with opacity */
+            color: #e0f2fe; /* Lighter Blue */
+            border: 1px solid rgba(14, 165, 233, 0.5); /* Subtle accent border */
         }
 
         /* Style for the Typed.js cursor */
@@ -341,9 +366,9 @@
             <div class="container mx-auto px-6 w-full"> <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white" data-aos="fade-up">Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://placehold.co/600x400/000000/0ea5e9?text=AWS+Pipeline" alt="AWS Data Pipeline Project Thumbnail" class="w-full h-48 object-cover">
-                        <div class="p-6 flex-grow flex flex-col"> <h3 class="text-xl font-semibold mb-3 text-white">AWS Data Pipeline & Lakehouse Optimization</h3>
-                            <ul class="list-disc list-inside text-gray-400 text-sm space-y-1 mb-4 flex-grow"> <li>Designed and implemented a high-throughput CDC pipeline using AWS Glue & DMS, processing 10K+ transactions/hour with 99% consistency.</li>
+                        <i class="card-bg-icon fab fa-aws"></i> <div class="card-content">
+                            <h3 class="text-xl font-semibold mb-3 text-white">AWS Data Pipeline & Lakehouse Optimization</h3>
+                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow"> <li>Designed and implemented a high-throughput CDC pipeline using AWS Glue & DMS, processing 10K+ transactions/hour with 99% consistency.</li>
                                 <li>Automated AWS infrastructure deployment with CDK, reducing provisioning time by 70% using Infrastructure-as-Code (IaC) best practices.</li>
                                 <li>Optimized real-time data ingestion on AWS Glue with Spark SQL, cutting processing latency to under 2 minutes using windowed transformations.</li>
                                 <li>Enforced enterprise-grade security in AWS Lake Formation with IAM roles, policies, and cross-service permissions across Glue, Athena, and Kinesis.</li>
@@ -358,10 +383,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="150"> <img src="https://placehold.co/600x400/000000/0ea5e9?text=RATS+System" alt="Real-Time Ad Targeting System Project Thumbnail" class="w-full h-48 object-cover">
-                        <div class="p-6 flex-grow flex flex-col">
+                    <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="150">
+                         <i class="card-bg-icon fas fa-shipping-fast"></i> <div class="card-content">
                             <h3 class="text-xl font-semibold mb-3 text-white">RATS – Real-Time Ad Targeting System</h3>
-                             <ul class="list-disc list-inside text-gray-400 text-sm space-y-1 mb-4 flex-grow">
+                             <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
                                 <li>Developed a high-throughput AWS pipeline to process 1TB+ of real-time Reddit data using Kafka, Spark, and PostgreSQL for precise ad targeting.</li>
                                 <li>Optimized Spark configurations and Kafka consumer groups, cutting latency to 600ms and achieving a 3x throughput boost for real-time ad delivery.</li>
                                 <li>Enhanced pipeline efficiency by 10x, enabling the system to process 700+ messages per second, dynamically serving targeted ads on trending posts.</li>
@@ -377,10 +402,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="200"> <img src="https://placehold.co/600x400/000000/0ea5e9?text=Music+Pipeline" alt="Real-Time Music Streaming Data Pipeline Project Thumbnail" class="w-full h-48 object-cover">
-                         <div class="p-6 flex-grow flex flex-col">
+                    <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                        <i class="card-bg-icon fas fa-stream"></i> <div class="card-content">
                             <h3 class="text-xl font-semibold mb-3 text-white">Real-Time Music Streaming Data Pipeline</h3>
-                             <ul class="list-disc list-inside text-gray-400 text-sm space-y-1 mb-4 flex-grow">
+                             <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
                                 <li>Built a real-time data pipeline using Kafka, Flink, and EMR, integrating with Looker dashboards to provide real-time music streaming insights.</li>
                                 <li>Stored, transformed, and processed streaming data in S3, Redshift and DBT, enabling both batch and real-time insights for business intelligence.</li>
                                 <li>Automated data workflows with Dagster and managed infrastructure using Terraform & Docker, ensuring scalability, flexibility, and efficiency.</li>
@@ -398,10 +423,10 @@
                             </div>
                         </div>
                     </div>
-                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="250"> <img src="https://placehold.co/600x400/000000/0ea5e9?text=Healthcare+Pipeline" alt="Cloud-Native Healthcare Data Pipeline Project Thumbnail" class="w-full h-48 object-cover">
-                         <div class="p-6 flex-grow flex flex-col">
+                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="250">
+                        <i class="card-bg-icon fas fa-notes-medical"></i> <div class="card-content">
                             <h3 class="text-xl font-semibold mb-3 text-white">Cloud-Native Healthcare Data Pipeline</h3>
-                             <ul class="list-disc list-inside text-gray-400 text-sm space-y-1 mb-4 flex-grow">
+                             <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
                                 <li>Built a scalable healthcare data lake on GCP with BigQuery & Cloud Storage, cutting query latency by 40% and enabling real-time analytics.</li>
                                 <li>Engineered a high-performance Spark ETL pipeline, processing 10GB+ Medicare Part D data, accelerating transformations by 3x for faster insights.</li>
                                 <li>Developed real-time Power BI dashboards powered by MySQL, tracking prescriptions, provider’s performance trends for better decision-making.</li>
@@ -418,10 +443,10 @@
                             </div>
                         </div>
                     </div>
-                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="300"> <img src="https://placehold.co/600x400/000000/0ea5e9?text=Portfolio+DL" alt="Portfolio Management with Deep Learning Project Thumbnail" class="w-full h-48 object-cover">
-                         <div class="p-6 flex-grow flex flex-col">
+                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                        <i class="card-bg-icon fas fa-chart-line"></i> <div class="card-content">
                             <h3 class="text-xl font-semibold mb-3 text-white">Portfolio Management with Deep Learning</h3>
-                             <ul class="list-disc list-inside text-gray-400 text-sm space-y-1 mb-4 flex-grow">
+                             <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
                                 <li>Designed an LSTM-based Recurrent Neural Network (RNN) to forecast stock returns, incorporating deep learning architectures to optimize portfolio.</li>
                                 <li>Processed S&P 500 historical price data (2007–2021) using the Yahoo Finance and Quandl APIs, integrating preprocessing pipelines in Python.</li>
                                 <li>Achieved significant accuracy improvements by incorporating advanced deep learning architectures and learning rate schedules.</li>
@@ -438,10 +463,10 @@
                             </div>
                         </div>
                     </div>
-                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="350"> <img src="https://placehold.co/600x400/000000/0ea5e9?text=Retinopathy+DL" alt="Diabetic Retinopathy Detection Project Thumbnail" class="w-full h-48 object-cover">
-                         <div class="p-6 flex-grow flex flex-col">
+                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="350">
+                        <i class="card-bg-icon fas fa-eye"></i> <div class="card-content">
                             <h3 class="text-xl font-semibold mb-3 text-white">Diabetic Retinopathy Detection</h3>
-                             <ul class="list-disc list-inside text-gray-400 text-sm space-y-1 mb-4 flex-grow">
+                             <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
                                 <li>Developed an automated diabetic retinopathy detection system using CNN, achieving 94% accuracy in retinal image classification.</li>
                                 <li>Implemented an optimized image preprocessing pipeline with normalization and data augmentation, enhancing model robustness and generalization.</li>
                                 <li>Built a multi-stage model to classify 5 severity levels of diabetic retinopathy, enabling early diagnosis and improving healthcare outcomes.</li>
@@ -456,10 +481,10 @@
                              </div>
                         </div>
                     </div>
-                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="400"> <img src="https://placehold.co/600x400/000000/0ea5e9?text=Cab+Pricing" alt="Cab Dynamic Pricing App Project Thumbnail" class="w-full h-48 object-cover">
-                         <div class="p-6 flex-grow flex flex-col">
+                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="400">
+                        <i class="card-bg-icon fas fa-taxi"></i> <div class="card-content">
                              <h3 class="text-xl font-semibold mb-3 text-white">Cab Dynamic Pricing Application</h3>
-                             <ul class="list-disc list-inside text-gray-400 text-sm space-y-1 mb-4 flex-grow">
+                             <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
                                 <li>Developed dynamic pricing models for a ride-hailing app using geospatial, weather, and demand data. Achieved 85% accuracy.</li>
                                 <li>Designed and deployed an interactive front-end with Streamlit, enabling real-time pricing predictions based on user inputs for ride details.</li>
                                 <li>Optimized retrainable models with a user feedback loop, reducing model drift and enhancing real-time accuracy for pricing in the ride-hailing market.</li>
@@ -476,10 +501,10 @@
                              </div>
                          </div>
                      </div>
-                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="450"> <img src="https://placehold.co/600x400/000000/0ea5e9?text=LLM+Sentiment" alt="LLM Sentiment Analysis Project Thumbnail" class="w-full h-48 object-cover">
-                         <div class="p-6 flex-grow flex flex-col">
+                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="450">
+                        <i class="card-bg-icon fas fa-comments"></i> <div class="card-content">
                              <h3 class="text-xl font-semibold mb-3 text-white">LLM-Powered Sentiment Analysis (Weather/Climate)</h3>
-                             <ul class="list-disc list-inside text-gray-400 text-sm space-y-1 mb-4 flex-grow">
+                             <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
                                 <li>Leveraged Llama 3 LLM via Hugging Face Transformers for zero-shot sentiment analysis (positive, negative, neutral) on weather/climate-related text data (e.g., tweets).</li>
                                 <li>Engineered prompts to guide the LLM for accurate classification based on text content.</li>
                                 <li>Processed and cleaned text data using Python and Pandas for model input.</li>
@@ -603,15 +628,6 @@
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileNavMenu.classList.remove('open');
-                // Optional: Smooth scroll to section after closing nav
-                // const targetId = link.getAttribute('href');
-                // const targetElement = document.querySelector(targetId);
-                // if (targetElement) {
-                //     // Add a small delay to allow nav to close before scrolling
-                //     setTimeout(() => {
-                //         targetElement.scrollIntoView({ behavior: 'smooth' });
-                //     }, 300); // Adjust delay if needed
-                // }
             });
         });
 
