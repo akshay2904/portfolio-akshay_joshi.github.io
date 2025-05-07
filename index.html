@@ -366,20 +366,21 @@
             <div class="container mx-auto px-6 w-full"> <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white" data-aos="fade-up">Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="100">
-                        <i class="card-bg-icon fab fa-aws"></i> <div class="card-content">
-                            <h3 class="text-xl font-semibold mb-3 text-white">AWS Data Pipeline & Lakehouse Optimization</h3>
-                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow"> <li>Designed and implemented a high-throughput CDC pipeline using AWS Glue & DMS, processing 10K+ transactions/hour with 99% consistency.</li>
-                                <li>Automated AWS infrastructure deployment with CDK, reducing provisioning time by 70% using Infrastructure-as-Code (IaC) best practices.</li>
-                                <li>Optimized real-time data ingestion on AWS Glue with Spark SQL, cutting processing latency to under 2 minutes using windowed transformations.</li>
-                                <li>Enforced enterprise-grade security in AWS Lake Formation with IAM roles, policies, and cross-service permissions across Glue, Athena, and Kinesis.</li>
+                        <i class="card-bg-icon fas fa-layer-group"></i>
+                        <div class="card-content">
+                            <h3 class="text-xl font-semibold mb-3 text-white">AWS Data Pipeline and Lakehouse</h3>
+                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
+                                <li>Engineered a modular data Lakehouse on AWS S3 using Apache Iceberg for scalable, ACID-compliant table storage with versioning and time-travel.</li>
+                                <li>Developed end-to-end data models with dbt, transforming raw financial data into clean, analytics-ready fact and dimension tables for reporting.</li>
+                                <li>Automated pipeline orchestration with Dagster and enabled low-latency querying via Trino (Starburst Galaxy) for on-demand data insights.</li>
                             </ul>
-                            <div class="mt-auto pt-2"> <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">AWS Glue</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">DMS</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Redshift</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Athena</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">CDK</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Spark SQL</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Lake Formation</span>
+                            <div class="mt-auto pt-2">
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">AWS S3</span>
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Apache Iceberg</span>
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">dbt</span>
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Trino</span>
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Dagster</span>
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Data Lakehouse</span>
                             </div>
                         </div>
                     </div>
