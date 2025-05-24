@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         /* Custom Styles - Black Theme */
@@ -368,19 +368,20 @@
                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="100">
                         <i class="card-bg-icon fas fa-layer-group"></i>
                         <div class="card-content">
-                            <h3 class="text-xl font-semibold mb-3 text-white">AWS Data Pipeline and Lakehouse</h3>
+                            <h3 class="text-xl font-semibold mb-3 text-white">Data Lakehouse Project</h3>
                             <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
-                                <li>Engineered a modular data Lakehouse on AWS S3 using Apache Iceberg for scalable, ACID-compliant table storage with versioning and time-travel.</li>
-                                <li>Developed end-to-end data models with dbt, transforming raw financial data into clean, analytics-ready fact and dimension tables for reporting.</li>
-                                <li>Automated pipeline orchestration with Dagster and enabled low-latency querying via Trino (Starburst Galaxy) for on-demand data insights.</li>
+                                <li>Engineered a modular data Lakehouse on AWS S3 using Apache Iceberg for scalable, ACID-compliant table storage with versioning and time-travel capabilities.</li>
+                                <li>Developed end-to-end data models with dbt, transforming raw financial data (clients, assets, transactions) into clean, analytics-ready fact and dimension tables.</li>
+                                <li>Automated the entire data pipeline, from ingestion (Hive external tables) and Iceberg table creation in Starburst Galaxy to dbt transformations and data quality testing, using Dagster.</li>
+                                <li>Enabled high-performance, low-latency querying across the lakehouse using Starburst Trino, providing on-demand data access for analytics and BI, with lineage visualized via dbt docs.</li>
                             </ul>
                             <div class="mt-auto pt-2">
                                 <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">AWS S3</span>
                                 <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Apache Iceberg</span>
                                 <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">dbt</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Trino</span>
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Trino (Starburst)</span>
                                 <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Dagster</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Data Lakehouse</span>
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Hive</span>
                             </div>
                         </div>
                     </div>
@@ -399,7 +400,6 @@
                                 <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Spark</span>
                                 <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">PostgreSQL</span>
                                 <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Real-Time</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Scalability</span>
                             </div>
                         </div>
                     </div>
@@ -425,15 +425,36 @@
                         </div>
                     </div>
                      <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="250">
-                        <i class="card-bg-icon fas fa-notes-medical"></i> <div class="card-content">
+                        <i class="card-bg-icon fas fa-file-invoice-dollar"></i>
+                        <div class="card-content">
+                            <h3 class="text-xl font-semibold mb-3 text-white">Healthcare Revenue Cycle Analytics Pipeline</h3>
+                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
+                                <li>Designed and implemented scalable ETL pipelines for healthcare Revenue Cycle Management (RCM) data, utilizing GCP services including GCS for storage, BigQuery for data warehousing, and Dataproc for large-scale processing.</li>
+                                <li>Orchestrated complex data workflows using Apache Airflow, ensuring timely and reliable data ingestion, transformation, and loading processes.</li>
+                                <li>Applied advanced data engineering techniques such as Slowly Changing Dimensions (SCD Type 2) for historical data tracking, metadata-driven design for pipeline flexibility, and a Medallion architecture (Bronze, Silver, Gold layers) for progressive data refinement.</li>
+                            </ul>
+                            <div class="mt-auto pt-2">
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">GCP</span>
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">BigQuery</span>
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Dataproc</span>
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Airflow</span>
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Cloud SQL</span>
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Cloud Build</span>
+                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Healthcare RCM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                        <i class="card-bg-icon fas fa-notes-medical"></i>
+                        <div class="card-content">
                             <h3 class="text-xl font-semibold mb-3 text-white">Cloud-Native Healthcare Data Pipeline</h3>
-                             <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
+                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
                                 <li>Built a scalable healthcare data lake on GCP with BigQuery & Cloud Storage, cutting query latency by 40% and enabling real-time analytics.</li>
                                 <li>Engineered a high-performance Spark ETL pipeline, processing 10GB+ Medicare Part D data, accelerating transformations by 3x for faster insights.</li>
                                 <li>Developed real-time Power BI dashboards powered by MySQL, tracking prescriptions, provider’s performance trends for better decision-making.</li>
                                 <li>Automated infrastructure with Terraform & Docker, improving scalability, reliability, and reducing operational overhead by 50%.</li>
                             </ul>
-                             <div class="mt-auto pt-2">
+                            <div class="mt-auto pt-2">
                                 <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">GCP</span>
                                 <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">BigQuery</span>
                                 <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Spark</span>
@@ -444,7 +465,7 @@
                             </div>
                         </div>
                     </div>
-                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="350">
                         <i class="card-bg-icon fas fa-chart-line"></i> <div class="card-content">
                             <h3 class="text-xl font-semibold mb-3 text-white">Portfolio Management with Deep Learning</h3>
                              <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
@@ -464,7 +485,7 @@
                             </div>
                         </div>
                     </div>
-                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="350">
+                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="400">
                         <i class="card-bg-icon fas fa-eye"></i> <div class="card-content">
                             <h3 class="text-xl font-semibold mb-3 text-white">Diabetic Retinopathy Detection</h3>
                              <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
@@ -482,7 +503,7 @@
                              </div>
                         </div>
                     </div>
-                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="400">
+                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="450">
                         <i class="card-bg-icon fas fa-taxi"></i> <div class="card-content">
                              <h3 class="text-xl font-semibold mb-3 text-white">Cab Dynamic Pricing Application</h3>
                              <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
@@ -502,8 +523,7 @@
                              </div>
                          </div>
                      </div>
-                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="450">
-                        <i class="card-bg-icon fas fa-comments"></i> <div class="card-content">
+                     <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="500"> <i class="card-bg-icon fas fa-comments"></i> <div class="card-content">
                              <h3 class="text-xl font-semibold mb-3 text-white">LLM-Powered Sentiment Analysis (Weather/Climate)</h3>
                              <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
                                 <li>Leveraged Llama 3 LLM via Hugging Face Transformers for zero-shot sentiment analysis (positive, negative, neutral) on weather/climate-related text data (e.g., tweets).</li>
