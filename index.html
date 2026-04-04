@@ -1,662 +1,602 @@
-olio · HTML
-Copy
-
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akshay Joshi - Data Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
- 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #000000;
-            color: #e5e7eb;
-        }
- 
-        html {
-            scroll-behavior: smooth;
-            scroll-snap-type: y mandatory;
-        }
- 
-        .accent-color { color: #0ea5e9; }
-        .bg-accent-color { background-color: #0ea5e9; }
-        .border-accent-color { border-color: #0ea5e9; }
-        .hover\:bg-accent-dark:hover { background-color: #0284c7; }
-        .hover\:text-accent-color:hover { color: #0ea5e9; }
-        .hover\:border-accent-color:hover { border-color: #0ea5e9; }
- 
-        section {
-            padding-top: 6rem;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            scroll-snap-align: start;
-            scroll-snap-stop: always;
-        }
-        #hero {
-           padding-top: 8rem;
-           min-height: 100vh;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           scroll-snap-align: start;
-           scroll-snap-stop: always;
-        }
-        #hero > div {
-            width: 100%;
-            text-align: center;
-        }
-        @media (min-width: 768px) {
-             #hero > div { text-align: left; }
-        }
- 
-        .card {
-            background-color: #111111;
-            border-radius: 0.5rem;
-            border: 1px solid #2a2a2a;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3), 0 2px 4px -1px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            overflow: hidden;
-            position: relative;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.4), 0 4px 6px -2px rgba(0,0,0,0.3);
-            border-color: #0ea5e9;
-        }
-        .card-content {
-            position: relative;
-            z-index: 10;
-            padding: 1.5rem;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            background-color: rgba(17,17,17,0.85);
-        }
-        .card-bg-icon {
-            position: absolute;
-            bottom: -20px;
-            right: -20px;
-            font-size: 8rem;
-            color: #0ea5e9;
-            opacity: 0.08;
-            z-index: 1;
-            pointer-events: none;
-            transform: rotate(-15deg);
-        }
- 
-        .mobile-nav {
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-            background-color: #111111;
-            border-left: 1px solid #2a2a2a;
-        }
-        .mobile-nav.open { transform: translateX(0); }
- 
-        .skill-item {
-            background-color: #1f1f1f;
-            border-radius: 0.375rem;
-            padding: 0.75rem;
-            display: flex;
-            align-items: center;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            border: 1px solid #333333;
-        }
-        .skill-item:hover {
-            background-color: #2a2a2a;
-            transform: scale(1.03);
-            border-color: #0ea5e9;
-        }
-        .skill-item i { color: #0ea5e9; margin-right: 0.75rem; width: 20px; text-align: center; }
-        .skill-item span { color: #d1d5db; }
- 
-        .timeline-border { border-color: #333333; }
-        .timeline-dot { background-color: #0ea5e9; }
-        .timeline-dot-outer { border-color: #111111; }
- 
-        .section-bg-contrast { background-color: #111111; border-radius: 0.5rem; }
-        .header-footer-bg { background-color: #0a0a0a; border-color: #2a2a2a; }
- 
-        .project-tag {
-            background-color: rgba(30,58,138,0.8);
-            color: #e0f2fe;
-            border: 1px solid rgba(14,165,233,0.5);
-        }
- 
-        .typed-cursor {
-            opacity: 1;
-            color: #0ea5e9;
-            animation: blink 0.7s infinite;
-        }
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        #hero .subtitle-paragraph { min-height: 3em; }
- 
-        /* Badge for current role */
-        .current-badge {
-            background-color: rgba(14,165,233,0.15);
-            border: 1px solid rgba(14,165,233,0.4);
-            color: #0ea5e9;
-            font-size: 0.7rem;
-            font-weight: 600;
-            padding: 0.15rem 0.5rem;
-            border-radius: 9999px;
-            display: inline-block;
-            margin-left: 0.5rem;
-            vertical-align: middle;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Akshay Joshi — Senior Data Engineer specialising in scalable data pipelines, AWS, Spark, and cloud-native data platforms." />
+  <title>Akshay Joshi — Senior Data Engineer</title>
+
+  <!-- ── Fonts ──────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ── Third-party CSS ────────────────────────────────────────────────── -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- ── Own Stylesheets (order matters) ────────────────────────────────── -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
 </head>
-<body class="antialiased">
- 
-    <header class="header-footer-bg shadow-md fixed top-0 left-0 right-0 z-50 border-b">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#hero" class="text-2xl font-bold accent-color">Akshay Joshi</a>
-            <div class="hidden md:flex space-x-6 items-center">
-                <a href="#about" class="text-gray-300 hover:text-accent-color transition duration-300">About</a>
-                <a href="#skills" class="text-gray-300 hover:text-accent-color transition duration-300">Skills</a>
-                <a href="#experience" class="text-gray-300 hover:text-accent-color transition duration-300">Experience</a>
-                <a href="#projects" class="text-gray-300 hover:text-accent-color transition duration-300">Projects</a>
-                <a href="#contact" class="text-gray-300 hover:text-accent-color transition duration-300">Contact</a>
-                <a href="https://linkedin.com/in/akshay-joshi-296743175/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent-color transition duration-300" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin fa-lg"></i>
-                </a>
-                <a href="https://github.com/akshay2904" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent-color transition duration-300" aria-label="GitHub">
-                    <i class="fab fa-github fa-lg"></i>
-                </a>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-nav-button" class="text-gray-300 focus:outline-none">
-                    <i class="fas fa-bars fa-lg"></i>
-                </button>
-            </div>
-        </nav>
-        <div id="mobile-nav-menu" class="mobile-nav fixed top-0 right-0 h-full w-64 shadow-lg p-6 md:hidden z-40">
-            <button id="close-nav-button" class="absolute top-4 right-4 text-gray-400 focus:outline-none hover:text-white">
-                <i class="fas fa-times fa-lg"></i>
-            </button>
-            <nav class="mt-10 flex flex-col space-y-4">
-                <a href="#about" class="text-gray-300 hover:text-accent-color transition duration-300 mobile-nav-link py-2">About</a>
-                <a href="#skills" class="text-gray-300 hover:text-accent-color transition duration-300 mobile-nav-link py-2">Skills</a>
-                <a href="#experience" class="text-gray-300 hover:text-accent-color transition duration-300 mobile-nav-link py-2">Experience</a>
-                <a href="#projects" class="text-gray-300 hover:text-accent-color transition duration-300 mobile-nav-link py-2">Projects</a>
-                <a href="#contact" class="text-gray-300 hover:text-accent-color transition duration-300 mobile-nav-link py-2">Contact</a>
-                <div class="flex space-x-4 pt-4 border-t border-gray-700 mt-4">
-                    <a href="https://linkedin.com/in/akshay-joshi-296743175/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent-color transition duration-300" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                    <a href="https://github.com/akshay2904" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent-color transition duration-300" aria-label="GitHub">
-                        <i class="fab fa-github fa-lg"></i>
-                    </a>
-                </div>
-            </nav>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+
+      <a href="#hero" class="site-header__logo">Akshay Joshi</a>
+
+      <!-- Desktop nav -->
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#about"      class="desktop-nav__link">About</a>
+        <a href="#skills"     class="desktop-nav__link">Skills</a>
+        <a href="#experience" class="desktop-nav__link">Experience</a>
+        <a href="#projects"   class="desktop-nav__link">Projects</a>
+        <a href="#contact"    class="desktop-nav__link">Contact</a>
+        <a href="https://linkedin.com/in/akshay-joshi-296743175/" target="_blank" rel="noopener noreferrer" class="desktop-nav__icon social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/akshay2904" target="_blank" rel="noopener noreferrer" class="desktop-nav__icon social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </nav>
+
+      <!-- Hamburger (mobile only) -->
+      <button id="hamburger-btn" class="hamburger-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav drawer -->
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+    <button id="mobile-nav-close" class="mobile-nav__close" aria-label="Close navigation">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="mobile-nav__links">
+      <a href="#about"      class="mobile-nav__link">About</a>
+      <a href="#skills"     class="mobile-nav__link">Skills</a>
+      <a href="#experience" class="mobile-nav__link">Experience</a>
+      <a href="#projects"   class="mobile-nav__link">Projects</a>
+      <a href="#contact"    class="mobile-nav__link">Contact</a>
+      <div class="mobile-nav__socials">
+        <a href="https://linkedin.com/in/akshay-joshi-296743175/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+        <a href="https://github.com/akshay2904" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── HERO ──────────────────────────────────────────────────────────── -->
+    <section id="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-inner">
+          <h1 id="hero-heading" class="hero-title" data-aos="fade-up">
+            Hi, I'm <span class="text-accent">Akshay Joshi</span>
+          </h1>
+          <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+            <span id="typed-role"></span>
+            <span> | Scalable Data Pipelines &amp; ML Integration</span>
+          </p>
+          <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+            <a href="#projects" class="btn btn--primary">View My Work</a>
+            <a href="#contact"  class="btn btn--outline">Get In Touch</a>
+          </div>
         </div>
-    </header>
- 
-    <main class="pt-20">
- 
-        <!-- HERO -->
-        <section id="hero" class="container mx-auto px-6">
-            <div>
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white" data-aos="fade-up">
-                    Hi, I'm <span class="accent-color">Akshay Joshi</span>
-                </h1>
-                <p class="subtitle-paragraph text-xl md:text-3xl font-medium text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="200">
-                    <span id="typed-role"></span> <span class="static-subtitle"> | Specializing in Scalable Data Pipelines and Machine Learning Integration</span>
-                </p>
-                <div data-aos="fade-up" data-aos-delay="400">
-                    <a href="#projects" class="bg-accent-color text-gray-900 font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-accent-dark hover:text-white transition duration-300 inline-block mr-4 mb-4">
-                        View My Work
-                    </a>
-                    <a href="#contact" class="border-2 border-accent-color accent-color font-semibold py-3 px-6 rounded-lg hover:bg-accent-color hover:text-gray-900 transition duration-300 inline-block mb-4">
-                        Get In Touch
-                    </a>
-                </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ─────────────────────────────────────────────────────────── -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container section-inner">
+        <h2 id="about-heading" class="section-title" data-aos="fade-up">About Me</h2>
+        <div class="about-body" data-aos="fade-up" data-aos-delay="100">
+          <p>
+            I'm a Senior Data Engineer with 4+ years of experience designing and deploying scalable data pipelines, ETL/ELT processes, and cloud-native data platforms. Currently based in New Haven, CT, I work at Capital One (via Blend360), where I build terabyte-scale marketing data platforms on AWS using Glue, Step Functions, Lambda, and Databricks.
+          </p>
+          <p>
+            I'm proficient in Python, SQL, and Spark, with deep hands-on expertise across AWS, GCP, and Azure. My stack spans Snowflake, Databricks, Apache Kafka, DBT, Airflow, and Delta Lake. I'm equally comfortable designing dimensional data models, writing production Spark SQL, enforcing data governance, and delivering analytics-ready datasets that drive real business decisions.
+          </p>
+          <p>
+            I hold a Master's in Applied Data Science from Syracuse University (May 2025) and have previously shipped impactful data systems at Flipkart, ProHealth Group, and Storeking. I'm passionate about building reliable, high-throughput data infrastructure and developing intelligent, observable pipelines at scale.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ────────────────────────────────────────────────────────── -->
+    <section id="skills" class="section--contrast" aria-labelledby="skills-heading">
+      <div class="container section-inner">
+        <h2 id="skills-heading" class="section-title" data-aos="fade-up">Technical Skills</h2>
+        <div class="skills-grid">
+          <!-- Languages & Tools -->
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="50">
+            <i class="fab fa-python skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Python</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-database skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">SQL</span>
+          </div>
+          <!-- Cloud -->
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="150">
+            <i class="fab fa-aws skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">AWS</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+            <i class="fab fa-google skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">GCP</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="250">
+            <i class="fab fa-microsoft skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Azure</span>
+          </div>
+          <!-- Data platforms -->
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-snowflake skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Snowflake</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="350">
+            <i class="fas fa-fire skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Apache Spark</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="400">
+            <i class="fas fa-stream skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Kafka</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="450">
+            <i class="fas fa-wind skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Airflow</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="500">
+            <i class="fas fa-cubes skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">DBT</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="550">
+            <i class="fas fa-layer-group skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Databricks</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="600">
+            <i class="fas fa-project-diagram skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Data Modeling</span>
+          </div>
+          <!-- DevOps -->
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="650">
+            <i class="fab fa-docker skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Docker</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="700">
+            <i class="fas fa-dharmachakra skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Kubernetes</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="750">
+            <i class="fas fa-code-branch skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">CI/CD</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="800">
+            <i class="fas fa-layer-group skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Terraform</span>
+          </div>
+          <!-- ML / AI -->
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="850">
+            <i class="fas fa-brain skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Machine Learning</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="900">
+            <i class="fas fa-network-wired skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Neural Networks</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="950">
+            <i class="fas fa-brain skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">TensorFlow</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="1000">
+            <i class="fas fa-lightbulb skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">PyTorch</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="1050">
+            <i class="fas fa-robot skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">LangChain</span>
+          </div>
+          <!-- Viz & governance -->
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="1100">
+            <i class="fas fa-chart-bar skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Power BI</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="1150">
+            <i class="fas fa-chart-pie skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Tableau</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="1200">
+            <i class="fab fa-git-alt skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Git</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="1250">
+            <i class="fas fa-vial skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">A/B Testing</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="1300">
+            <i class="fas fa-server skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Delta Lake</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="1350">
+            <i class="fas fa-shield-alt skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Data Governance</span>
+          </div>
+          <div class="skill-item" data-aos="fade-up" data-aos-delay="1400">
+            <i class="fas fa-tachometer-alt skill-item__icon" aria-hidden="true"></i>
+            <span class="skill-item__label">Pipeline Monitoring</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ─────────────────────────────────────────────────────── -->
+    <section id="experience" aria-labelledby="experience-heading">
+      <div class="container section-inner">
+        <h2 id="experience-heading" class="section-title" data-aos="fade-up">Experience</h2>
+        <div class="timeline" role="list">
+          <div class="timeline__cap timeline__cap--top" aria-hidden="true"></div>
+
+          <!-- Capital One / Blend360 -->
+          <article class="timeline__entry" data-aos="fade-left" role="listitem">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <h3 class="timeline__role">
+              Senior Data Engineer
+              <span class="badge--current" aria-label="Current role">Current</span>
+            </h3>
+            <p class="timeline__company">Capital One <span style="color:var(--color-border-mid)">via</span> Blend360 — New Haven, CT</p>
+            <p class="timeline__dates">Oct 2025 – Present</p>
+            <ul class="timeline__list">
+              <li>Built cloud-native Marketing Data Platform on AWS with Glue, Lambda, Step Functions, DynamoDB, and S3, enabling terabyte-scale ETL pipelines.</li>
+              <li>Improved pipeline reliability by orchestrating ETL workflows via AWS Step Functions with CloudWatch monitoring and automated failure alerting.</li>
+              <li>Validated and tested Spark SQL transformations in Databricks to ensure accurate data processing and production-ready dataset delivery.</li>
+              <li>Standardized and added new attributes across existing schemas to support evolving business requirements and consistent downstream analytics.</li>
+              <li>Optimized Spark SQL queries and partition strategies in Databricks to reduce processing time and improve large-scale analytical performance.</li>
+              <li>Automated ETL deployments using Jenkins CI/CD pipelines to improve release consistency and reduce manual intervention.</li>
+              <li>Enforced data governance standards including schema validation and lineage tracking to prevent production defects and ensure compliance.</li>
+              <li>Enabled data activation via Hightouch by validating Databricks datasets, ensuring accurate replication to downstream marketing platforms.</li>
+              <li>Delivered scalable dimensional datasets by translating business requirements into analytics-ready models with Product Owners and Analysts.</li>
+              <li>Stabilized QA environment by generating synthetic test data aligned to production schemas and running validation pipelines for dataset parity.</li>
+            </ul>
+          </article>
+
+          <!-- ProHealth Group -->
+          <article class="timeline__entry" data-aos="fade-left" role="listitem">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <h3 class="timeline__role">Data Engineer</h3>
+            <p class="timeline__company">ProHealth Group — Birmingham, AL</p>
+            <p class="timeline__dates">May 2024 – May 2025</p>
+            <ul class="timeline__list">
+              <li>Built LLM-powered clinical note automation using LangChain and AWS, reducing clinician documentation workload by 20%.</li>
+              <li>Developed census prediction models using Prophet and NeuralProphet, achieving a MAE of 3 for proactive staffing and operations planning.</li>
+              <li>Designed a rehospitalization risk prediction model using XGBoost, achieving 82.5% accuracy and deploying via Snowflake's model registry.</li>
+              <li>Optimized ETL workflows with DBT and Snowflake, cutting batch processing time by 70% via fact/dimension modeling and incremental strategies.</li>
+              <li>Operationalized DBT models via GitHub CI/CD, standardizing deployments and ensuring reliable, auditable pipelines for BI and decision support.</li>
+              <li>Engineered HIPAA-compliant Power BI dashboards to monitor patient readmissions, operational KPIs, and regulatory compliance metrics.</li>
+              <li>Integrated DBT with Fivetran and migrated SQL Server data to Snowflake, resolving pipeline failures and ensuring 99% reliable analytics delivery.</li>
+              <li>Designed DBT materializations and SCD Type 2 snapshot models for historical accuracy in patient and operations reporting.</li>
+            </ul>
+          </article>
+
+          <!-- Flipkart -->
+          <article class="timeline__entry" data-aos="fade-left" role="listitem">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <h3 class="timeline__role">Data Engineer</h3>
+            <p class="timeline__company">Flipkart — Bengaluru, India</p>
+            <p class="timeline__dates">February 2023 – August 2023</p>
+            <ul class="timeline__list">
+              <li>Reduced product return rates by 1.4% monthly through rigorous data-driven experimentation and customer insight analysis.</li>
+              <li>Implemented A/B testing and Bayesian inference for EMI adoption strategies, driving 16% adoption growth and 8% revenue increase in target segments.</li>
+              <li>Automated financial data consolidation with Apache Airflow, enabling real-time tracking of revenue, expenses, and margins across product categories.</li>
+              <li>Enhanced VAS insurance dashboard through strategic analysis, boosting adoption by 7% per quarter and expanding to high-demand regions.</li>
+              <li>Automated SQL query scheduling and optimization, cutting reporting turnaround by 75% and enabling real-time dashboards in Looker Studio.</li>
+              <li>Leveraged Flipkart Data Platform (FDP) to standardize pipelines and ensure consistent, high-quality datasets for reporting and analytics.</li>
+            </ul>
+          </article>
+
+          <!-- Storeking -->
+          <article class="timeline__entry" data-aos="fade-left" role="listitem">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <h3 class="timeline__role">Data Analyst</h3>
+            <p class="timeline__company">Storeking — Bengaluru, India</p>
+            <p class="timeline__dates">August 2021 – January 2023</p>
+            <ul class="timeline__list">
+              <li>Built BI dashboards that reduced quarterly losses by 2% through optimized stock liquidation strategies and improved demand forecasting accuracy.</li>
+              <li>Identified regional revenue growth opportunities via customer behavior analysis, driving 12% month-over-month sales growth.</li>
+              <li>Built supply chain analytics models that improved order fulfillment efficiency by 4% and reduced procurement costs by 12%.</li>
+              <li>Designed warehouse-level inventory dashboards tracking retailer-level demand, improving distribution planning and stock allocation.</li>
+              <li>Delivered monthly brand performance reports, identifying growth areas and securing promotional schemes that boosted product margins by up to 5%.</li>
+            </ul>
+          </article>
+
+          <div class="timeline__cap timeline__cap--bottom" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ───────────────────────────────────────────────────────── -->
+    <section id="projects" class="section--contrast" aria-labelledby="projects-heading">
+      <div class="container section-inner">
+        <h2 id="projects-heading" class="section-title" data-aos="fade-up">Projects</h2>
+        <div class="projects-grid">
+
+          <!-- Data Lakehouse -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="project-card__bg-icon fas fa-layer-group" aria-hidden="true"></i>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Data Lakehouse Project</h3>
+              <ul class="project-card__list">
+                <li>Engineered a modular data Lakehouse on AWS S3 using Apache Iceberg for ACID-compliant storage with versioning and time-travel capabilities.</li>
+                <li>Developed end-to-end data models with DBT transforming raw financial data into clean fact and dimension tables.</li>
+                <li>Automated the entire pipeline from ingestion (Hive external tables) through Iceberg table creation to DBT transformations using Dagster.</li>
+                <li>Enabled high-performance querying across the lakehouse using Starburst Trino with lineage visualized via DBT docs.</li>
+              </ul>
+              <div class="project-card__tags">
+                <span class="tag">AWS S3</span>
+                <span class="tag">Apache Iceberg</span>
+                <span class="tag">DBT</span>
+                <span class="tag">Trino</span>
+                <span class="tag">Dagster</span>
+                <span class="tag">Hive</span>
+              </div>
             </div>
-        </section>
- 
-        <!-- ABOUT -->
-        <section id="about" class="py-16 md:py-24 container mx-auto px-6">
-            <div class="w-full">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white" data-aos="fade-up">About Me</h2>
-                <div class="max-w-3xl mx-auto text-left text-lg text-gray-300 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                    <p class="mb-4">
-                        I'm a Senior Data Engineer with 4+ years of experience designing and deploying scalable data pipelines, ETL/ELT processes, and cloud-native data platforms. Currently based in New Haven, CT, I work at Capital One (via Blend360), where I build terabyte-scale marketing data platforms on AWS using Glue, Step Functions, Lambda, and Databricks.
-                    </p>
-                    <p class="mb-4">
-                        I'm proficient in Python, SQL, and Spark, with deep hands-on expertise across AWS, GCP, and Azure. My stack spans Snowflake, Databricks, Apache Kafka, DBT, Airflow, and Delta Lake. I'm equally comfortable designing dimensional data models, writing production Spark SQL, enforcing data governance, and delivering analytics-ready datasets that drive real business decisions.
-                    </p>
-                    <p>
-                        I hold a Master's in Applied Data Science from Syracuse University (May 2025) and have previously shipped impactful data systems at Flipkart, ProHealth Group, and Storeking. I'm passionate about building reliable, high-throughput data infrastructure and developing intelligent, observable pipelines at scale.
-                    </p>
-                </div>
+          </article>
+
+          <!-- RATS -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="150">
+            <i class="project-card__bg-icon fas fa-shipping-fast" aria-hidden="true"></i>
+            <div class="project-card__body">
+              <h3 class="project-card__title">RATS – Real-Time Ad Targeting System</h3>
+              <ul class="project-card__list">
+                <li>Developed a high-throughput AWS pipeline to process 1TB+ of real-time Reddit data using Kafka, Spark, and PostgreSQL.</li>
+                <li>Optimized Spark configs and Kafka consumer groups, cutting latency to 600ms and achieving 3× throughput boost.</li>
+                <li>Enhanced pipeline efficiency by 10×, enabling 700+ messages/second for dynamically targeted ads on trending posts.</li>
+                <li>Engineered auto-scaling and fault-tolerant AWS infrastructure for high availability under heavy traffic.</li>
+              </ul>
+              <div class="project-card__tags">
+                <span class="tag">AWS</span>
+                <span class="tag">Kafka</span>
+                <span class="tag">Spark</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Real-Time</span>
+              </div>
             </div>
-        </section>
- 
-        <!-- SKILLS -->
-        <section id="skills" class="py-16 md:py-24 section-bg-contrast">
-            <div class="container mx-auto px-6 w-full">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white" data-aos="fade-up">Technical Skills</h2>
-                <div class="max-w-6xl mx-auto px-4">
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 text-sm md:text-base">
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="50"><i class="fab fa-python fa-fw"></i><span>Python</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-database fa-fw"></i><span>SQL</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="150"><i class="fab fa-aws fa-fw"></i><span>AWS</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="200"><i class="fab fa-google fa-fw"></i><span>GCP</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="250"><i class="fab fa-microsoft fa-fw"></i><span>Azure</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-snowflake fa-fw"></i><span>Snowflake</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="350"><i class="fas fa-fire fa-fw"></i><span>Apache Spark</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-stream fa-fw"></i><span>Kafka</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="450"><i class="fas fa-wind fa-fw"></i><span>Airflow</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="500"><i class="fas fa-cubes fa-fw"></i><span>DBT</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="550"><i class="fas fa-layer-group fa-fw"></i><span>Databricks</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="600"><i class="fas fa-project-diagram fa-fw"></i><span>Data Modeling</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="650"><i class="fab fa-docker fa-fw"></i><span>Docker</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="700"><i class="fas fa-dharmachakra fa-fw"></i><span>Kubernetes</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="750"><i class="fas fa-code-branch fa-fw"></i><span>CI/CD</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="800"><i class="fas fa-layer-group fa-fw"></i><span>Terraform</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="850"><i class="fas fa-brain fa-fw"></i><span>Machine Learning</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="900"><i class="fas fa-network-wired fa-fw"></i><span>Neural Networks</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="950"><i class="fas fa-brain fa-fw"></i><span>TensorFlow</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="1000"><i class="fas fa-lightbulb fa-fw"></i><span>PyTorch</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="1050"><i class="fas fa-robot fa-fw"></i><span>LangChain</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="1100"><i class="fas fa-chart-bar fa-fw"></i><span>Power BI</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="1150"><i class="fas fa-chart-pie fa-fw"></i><span>Tableau</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="1200"><i class="fab fa-git-alt fa-fw"></i><span>Git</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="1250"><i class="fas fa-vial fa-fw"></i><span>A/B Testing</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="1300"><i class="fas fa-server fa-fw"></i><span>Delta Lake</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="1350"><i class="fas fa-shield-alt fa-fw"></i><span>Data Governance</span></div>
-                        <div class="skill-item" data-aos="fade-up" data-aos-delay="1400"><i class="fas fa-tachometer-alt fa-fw"></i><span>Pipeline Monitoring</span></div>
-                    </div>
-                </div>
+          </article>
+
+          <!-- Music Streaming -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="project-card__bg-icon fas fa-stream" aria-hidden="true"></i>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Real-Time Music Streaming Pipeline</h3>
+              <ul class="project-card__list">
+                <li>Built a real-time data pipeline using Kafka, Flink, and EMR, integrated with Looker dashboards for streaming insights.</li>
+                <li>Stored, transformed, and processed data in S3, Redshift, and DBT enabling batch and real-time BI.</li>
+                <li>Automated workflows with Dagster and managed infrastructure via Terraform and Docker.</li>
+                <li>Developed Metabase dashboards tracking user engagement, song popularity, and streaming trends in real time.</li>
+              </ul>
+              <div class="project-card__tags">
+                <span class="tag">Kafka</span>
+                <span class="tag">Flink</span>
+                <span class="tag">EMR</span>
+                <span class="tag">DBT</span>
+                <span class="tag">Dagster</span>
+                <span class="tag">Terraform</span>
+              </div>
             </div>
-        </section>
- 
-        <!-- EXPERIENCE -->
-        <section id="experience" class="py-16 md:py-24 container mx-auto px-6">
-            <div class="w-full">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white" data-aos="fade-up">Experience</h2>
-                <div class="max-w-4xl mx-auto space-y-12 relative border-l-2 timeline-border pl-8">
-                    <div class="absolute w-3 h-3 timeline-dot rounded-full -left-[7px] top-1"></div>
- 
-                    <!-- Capital One / Blend360 — NEW -->
-                    <div class="relative" data-aos="fade-left">
-                        <div class="absolute w-3 h-3 timeline-dot rounded-full -left-[38px] top-1 border-2 timeline-dot-outer"></div>
-                        <h3 class="text-xl font-semibold mb-1 text-white">
-                            Senior Data Engineer
-                            <span class="current-badge">Current</span>
-                        </h3>
-                        <p class="text-md font-medium text-gray-400 mb-1">Capital One <span class="text-gray-600">via</span> Blend360 &mdash; New Haven, CT</p>
-                        <p class="text-sm text-gray-600 mb-3">Oct 2025 – Present</p>
-                        <ul class="list-disc list-inside text-gray-300 space-y-1.5 text-sm md:text-base">
-                            <li>Built cloud-native Marketing Data Platform on AWS with Glue, Lambda, Step Functions, DynamoDB, and S3, enabling terabyte-scale ETL pipelines.</li>
-                            <li>Improved pipeline reliability by orchestrating ETL workflows using AWS Step Functions with CloudWatch monitoring and automated failure alerting.</li>
-                            <li>Validated and tested Spark SQL transformations in Databricks to ensure accurate data processing and production-ready dataset delivery.</li>
-                            <li>Standardized and added new attributes across existing schemas to support evolving business requirements and consistent downstream analytics.</li>
-                            <li>Optimized Spark SQL queries and partition strategies in Databricks to reduce processing time and improve large-scale analytical performance.</li>
-                            <li>Automated ETL deployments using Jenkins CI/CD pipelines to improve release consistency and reduce manual intervention.</li>
-                            <li>Enforced data governance standards including schema validation and lineage tracking to prevent production defects and ensure compliance.</li>
-                            <li>Enabled data activation via Hightouch by validating Databricks datasets, ensuring accurate replication to downstream marketing platforms.</li>
-                            <li>Delivered scalable dimensional datasets by translating business requirements into analytics-ready models with Product Owners and Analysts.</li>
-                            <li>Stabilized QA environment by generating synthetic test data aligned to production schemas and running validation pipelines to ensure full dataset parity.</li>
-                        </ul>
-                    </div>
- 
-                    <!-- ProHealth Group -->
-                    <div class="relative" data-aos="fade-left">
-                        <div class="absolute w-3 h-3 timeline-dot rounded-full -left-[38px] top-1 border-2 timeline-dot-outer"></div>
-                        <h3 class="text-xl font-semibold mb-1 text-white">Data Engineer</h3>
-                        <p class="text-md font-medium text-gray-400 mb-1">ProHealth Group &mdash; Birmingham, AL</p>
-                        <p class="text-sm text-gray-600 mb-3">May 2024 – May 2025</p>
-                        <ul class="list-disc list-inside text-gray-300 space-y-1.5 text-sm md:text-base">
-                            <li>Built LLM-powered clinical note automation using LangChain and AWS, reducing clinician documentation workload by 20%.</li>
-                            <li>Developed census prediction models using Prophet and NeuralProphet, achieving a MAE of 3 for proactive staffing and operations planning.</li>
-                            <li>Designed a rehospitalization risk prediction model using XGBoost, achieving 82.5% accuracy and deploying via Snowflake's model registry.</li>
-                            <li>Optimized ETL workflows with DBT and Snowflake, cutting batch processing time by 70% via fact/dimension modeling and incremental strategies.</li>
-                            <li>Operationalized DBT models via GitHub CI/CD, standardizing deployments and ensuring reliable, auditable pipelines for BI and decision support.</li>
-                            <li>Engineered HIPAA-compliant Power BI dashboards to monitor patient readmissions, operational KPIs, and regulatory compliance metrics.</li>
-                            <li>Integrated DBT with Fivetran and migrated SQL Server data to Snowflake, resolving pipeline failures and ensuring 99% reliable analytics delivery.</li>
-                            <li>Designed DBT materializations (ephemeral, table, incremental) and SCD Type 2 snapshot models for historical accuracy in patient and operations reporting.</li>
-                        </ul>
-                    </div>
- 
-                    <!-- Flipkart -->
-                    <div class="relative" data-aos="fade-left">
-                        <div class="absolute w-3 h-3 timeline-dot rounded-full -left-[38px] top-1 border-2 timeline-dot-outer"></div>
-                        <h3 class="text-xl font-semibold mb-1 text-white">Data Engineer</h3>
-                        <p class="text-md font-medium text-gray-400 mb-1">Flipkart &mdash; Bengaluru, India</p>
-                        <p class="text-sm text-gray-600 mb-3">February 2023 – August 2023</p>
-                        <ul class="list-disc list-inside text-gray-300 space-y-1.5 text-sm md:text-base">
-                            <li>Reduced product return rates by 1.4% monthly through rigorous data-driven experimentation and customer insight analysis.</li>
-                            <li>Implemented A/B testing and Bayesian inference for EMI adoption strategies, driving 16% adoption growth and 8% revenue increase in target segments.</li>
-                            <li>Automated financial data consolidation with Apache Airflow, enabling real-time tracking of revenue, expenses, and margins across product categories.</li>
-                            <li>Enhanced VAS insurance dashboard through strategic analysis, boosting adoption by 7% per quarter and expanding to high-demand regions.</li>
-                            <li>Automated SQL query scheduling and optimization, cutting reporting turnaround by 75% and enabling real-time dashboards in Looker Studio.</li>
-                            <li>Leveraged Flipkart Data Platform (FDP) to standardize pipelines and ensure consistent, high-quality datasets for reporting and analytics.</li>
-                        </ul>
-                    </div>
- 
-                    <!-- Storeking -->
-                    <div class="relative" data-aos="fade-left">
-                        <div class="absolute w-3 h-3 timeline-dot rounded-full -left-[38px] top-1 border-2 timeline-dot-outer"></div>
-                        <h3 class="text-xl font-semibold mb-1 text-white">Data Analyst</h3>
-                        <p class="text-md font-medium text-gray-400 mb-1">Storeking &mdash; Bengaluru, India</p>
-                        <p class="text-sm text-gray-600 mb-3">August 2021 – January 2023</p>
-                        <ul class="list-disc list-inside text-gray-300 space-y-1.5 text-sm md:text-base">
-                            <li>Built BI dashboards that reduced quarterly losses by 2% through optimized stock liquidation strategies and improved demand forecasting accuracy.</li>
-                            <li>Identified regional revenue growth opportunities via customer behavior analysis, driving 12% month-over-month sales growth.</li>
-                            <li>Built supply chain analytics models that improved order fulfillment efficiency by 4% and reduced procurement costs by 12%.</li>
-                            <li>Designed warehouse-level inventory dashboards tracking retailer-level demand, improving distribution planning and stock allocation.</li>
-                            <li>Delivered monthly brand performance reports, identifying growth areas and securing promotional schemes that boosted product margins by up to 5%.</li>
-                        </ul>
-                    </div>
- 
-                    <div class="absolute w-3 h-3 timeline-dot rounded-full -left-[7px] bottom-1"></div>
-                </div>
+          </article>
+
+          <!-- Healthcare RCM -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="250">
+            <i class="project-card__bg-icon fas fa-file-invoice-dollar" aria-hidden="true"></i>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Healthcare Revenue Cycle Analytics</h3>
+              <ul class="project-card__list">
+                <li>Designed scalable ETL pipelines for Healthcare RCM data using GCP services: GCS, BigQuery, and Dataproc.</li>
+                <li>Orchestrated complex workflows using Apache Airflow for reliable ingestion, transformation, and loading.</li>
+                <li>Applied SCD Type 2, metadata-driven design, and Medallion architecture (Bronze/Silver/Gold) for progressive data refinement.</li>
+                <li>Established CI/CD using GitHub and Cloud Build for automated testing and pipeline deployment.</li>
+              </ul>
+              <div class="project-card__tags">
+                <span class="tag">GCP</span>
+                <span class="tag">BigQuery</span>
+                <span class="tag">Dataproc</span>
+                <span class="tag">Airflow</span>
+                <span class="tag">Cloud Build</span>
+              </div>
             </div>
-        </section>
- 
-        <!-- PROJECTS -->
-        <section id="projects" class="py-16 md:py-24 section-bg-contrast">
-            <div class="container mx-auto px-6 w-full">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white" data-aos="fade-up">Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
- 
-                    <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="100">
-                        <i class="card-bg-icon fas fa-layer-group"></i>
-                        <div class="card-content">
-                            <h3 class="text-xl font-semibold mb-3 text-white">Data Lakehouse Project</h3>
-                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
-                                <li>Engineered a modular data Lakehouse on AWS S3 using Apache Iceberg for ACID-compliant storage with versioning and time-travel capabilities.</li>
-                                <li>Developed end-to-end data models with DBT transforming raw financial data into clean fact and dimension tables.</li>
-                                <li>Automated the entire pipeline from ingestion (Hive external tables) through Iceberg table creation to DBT transformations using Dagster.</li>
-                                <li>Enabled high-performance querying across the lakehouse using Starburst Trino with lineage visualized via DBT docs.</li>
-                            </ul>
-                            <div class="mt-auto pt-2">
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">AWS S3</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Apache Iceberg</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">DBT</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Trino (Starburst)</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Dagster</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Hive</span>
-                            </div>
-                        </div>
-                    </div>
- 
-                    <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="150">
-                        <i class="card-bg-icon fas fa-shipping-fast"></i>
-                        <div class="card-content">
-                            <h3 class="text-xl font-semibold mb-3 text-white">RATS – Real-Time Ad Targeting System</h3>
-                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
-                                <li>Developed a high-throughput AWS pipeline to process 1TB+ of real-time Reddit data using Kafka, Spark, and PostgreSQL.</li>
-                                <li>Optimized Spark configs and Kafka consumer groups, cutting latency to 600ms and achieving 3x throughput boost.</li>
-                                <li>Enhanced pipeline efficiency by 10x, enabling 700+ messages/second for dynamically targeted ads on trending posts.</li>
-                                <li>Engineered auto-scaling and fault-tolerant AWS infrastructure for high availability under heavy traffic.</li>
-                            </ul>
-                            <div class="mt-auto pt-2">
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">AWS</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Kafka</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Spark</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">PostgreSQL</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Real-Time</span>
-                            </div>
-                        </div>
-                    </div>
- 
-                    <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="200">
-                        <i class="card-bg-icon fas fa-stream"></i>
-                        <div class="card-content">
-                            <h3 class="text-xl font-semibold mb-3 text-white">Real-Time Music Streaming Data Pipeline</h3>
-                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
-                                <li>Built a real-time data pipeline using Kafka, Flink, and EMR, integrated with Looker dashboards for streaming insights.</li>
-                                <li>Stored, transformed, and processed data in S3, Redshift, and DBT, enabling batch and real-time BI.</li>
-                                <li>Automated workflows with Dagster and managed infrastructure via Terraform and Docker.</li>
-                                <li>Developed Metabase dashboards tracking user engagement, song popularity, and streaming trends in real time.</li>
-                            </ul>
-                            <div class="mt-auto pt-2">
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Kafka</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Flink</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">EMR</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">DBT</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Dagster</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Terraform</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Looker</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Metabase</span>
-                            </div>
-                        </div>
-                    </div>
- 
-                    <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="250">
-                        <i class="card-bg-icon fas fa-file-invoice-dollar"></i>
-                        <div class="card-content">
-                            <h3 class="text-xl font-semibold mb-3 text-white">Healthcare Revenue Cycle Analytics Pipeline</h3>
-                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
-                                <li>Designed scalable ETL pipelines for Healthcare RCM data using GCP services: GCS, BigQuery, and Dataproc.</li>
-                                <li>Orchestrated complex workflows using Apache Airflow for reliable ingestion, transformation, and loading.</li>
-                                <li>Applied SCD Type 2, metadata-driven design, and Medallion architecture (Bronze/Silver/Gold) for progressive data refinement.</li>
-                                <li>Established CI/CD using GitHub and Cloud Build for automated testing and deployment of pipeline components.</li>
-                            </ul>
-                            <div class="mt-auto pt-2">
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">GCP</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">BigQuery</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Dataproc</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Airflow</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Cloud Build</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Healthcare RCM</span>
-                            </div>
-                        </div>
-                    </div>
- 
-                    <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="300">
-                        <i class="card-bg-icon fas fa-notes-medical"></i>
-                        <div class="card-content">
-                            <h3 class="text-xl font-semibold mb-3 text-white">Cloud-Native Healthcare Data Pipeline</h3>
-                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
-                                <li>Built a scalable healthcare data lake on GCP with BigQuery and Cloud Storage, cutting query latency by 40%.</li>
-                                <li>Engineered a high-performance Spark ETL pipeline processing 10GB+ Medicare Part D data, accelerating transformations by 3x.</li>
-                                <li>Developed real-time Power BI dashboards powered by MySQL, tracking prescriptions and provider performance trends.</li>
-                                <li>Automated infrastructure with Terraform and Docker, improving scalability and reducing operational overhead by 50%.</li>
-                            </ul>
-                            <div class="mt-auto pt-2">
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">GCP</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">BigQuery</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Spark</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Power BI</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Terraform</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Docker</span>
-                            </div>
-                        </div>
-                    </div>
- 
-                    <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="350">
-                        <i class="card-bg-icon fas fa-chart-line"></i>
-                        <div class="card-content">
-                            <h3 class="text-xl font-semibold mb-3 text-white">Portfolio Management with Deep Learning</h3>
-                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
-                                <li>Designed an LSTM-based RNN to forecast stock returns and optimize portfolio allocation.</li>
-                                <li>Processed S&P 500 historical price data (2007–2021) via Yahoo Finance and Quandl APIs with Python preprocessing pipelines.</li>
-                                <li>Achieved significant accuracy improvements with advanced deep learning architectures and learning rate schedules.</li>
-                                <li>Proposed NLP sentiment analysis and satellite imagery as alternative data sources to enhance predictive models.</li>
-                            </ul>
-                            <div class="mt-auto pt-2">
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">TensorFlow</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Keras</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">LSTM</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">RNN</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Hugging Face</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Finance</span>
-                            </div>
-                        </div>
-                    </div>
- 
-                    <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="400">
-                        <i class="card-bg-icon fas fa-eye"></i>
-                        <div class="card-content">
-                            <h3 class="text-xl font-semibold mb-3 text-white">Diabetic Retinopathy Detection</h3>
-                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
-                                <li>Developed an automated diabetic retinopathy detection system using CNN, achieving 94% accuracy in retinal image classification.</li>
-                                <li>Implemented an optimized image preprocessing pipeline with normalization and data augmentation for model robustness.</li>
-                                <li>Built a multi-stage model to classify 5 severity levels of diabetic retinopathy for early diagnosis.</li>
-                                <li>Benchmarked VGG-16 vs ResNet architectures, achieving best accuracy with ResNet.</li>
-                            </ul>
-                            <div class="mt-auto pt-2">
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">PyTorch</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">CNN</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">ResNet</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Computer Vision</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Healthcare</span>
-                            </div>
-                        </div>
-                    </div>
- 
-                    <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="450">
-                        <i class="card-bg-icon fas fa-taxi"></i>
-                        <div class="card-content">
-                            <h3 class="text-xl font-semibold mb-3 text-white">Cab Dynamic Pricing Application</h3>
-                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
-                                <li>Developed dynamic pricing models using geospatial, weather, and demand data, achieving 85% accuracy.</li>
-                                <li>Designed and deployed an interactive Streamlit front-end for real-time pricing predictions based on ride details.</li>
-                                <li>Integrated user feedback loops with CI/CD pipelines for seamless model retraining and deployment.</li>
-                            </ul>
-                            <div class="mt-auto pt-2">
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">XGBoost</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Scikit-learn</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">FastAPI</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Streamlit</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">MLflow</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Docker</span>
-                            </div>
-                        </div>
-                    </div>
- 
-                    <div class="card flex flex-col" data-aos="fade-up" data-aos-delay="500">
-                        <i class="card-bg-icon fas fa-comments"></i>
-                        <div class="card-content">
-                            <h3 class="text-xl font-semibold mb-3 text-white">LLM-Powered Sentiment Analysis</h3>
-                            <ul class="list-disc list-inside text-gray-300 text-sm space-y-1 mb-4 flex-grow">
-                                <li>Leveraged Llama 3 via Hugging Face Transformers for zero-shot sentiment analysis on weather/climate-related text data.</li>
-                                <li>Engineered prompts to guide the LLM for accurate positive/negative/neutral classification.</li>
-                                <li>Analyzed sentiment distribution to surface public opinion trends on weather and climate discussions.</li>
-                            </ul>
-                            <div class="mt-auto pt-2">
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">LLM (Llama 3)</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Hugging Face</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Prompt Engineering</span>
-                                <span class="inline-block project-tag text-xs font-semibold mr-2 px-2.5 py-0.5 rounded mb-1">Zero-Shot Classification</span>
-                            </div>
-                        </div>
-                    </div>
- 
-                </div>
+          </article>
+
+          <!-- Cloud Healthcare -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="project-card__bg-icon fas fa-notes-medical" aria-hidden="true"></i>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Cloud-Native Healthcare Data Pipeline</h3>
+              <ul class="project-card__list">
+                <li>Built a scalable healthcare data lake on GCP with BigQuery and Cloud Storage, cutting query latency by 40%.</li>
+                <li>Engineered a Spark ETL pipeline processing 10GB+ Medicare Part D data, accelerating transformations by 3×.</li>
+                <li>Developed real-time Power BI dashboards powered by MySQL, tracking prescriptions and provider performance.</li>
+                <li>Automated infrastructure with Terraform and Docker, reducing operational overhead by 50%.</li>
+              </ul>
+              <div class="project-card__tags">
+                <span class="tag">GCP</span>
+                <span class="tag">BigQuery</span>
+                <span class="tag">Spark</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Terraform</span>
+                <span class="tag">Docker</span>
+              </div>
             </div>
-        </section>
- 
-        <!-- EDUCATION -->
-        <section id="education" class="py-16 md:py-24 container mx-auto px-6">
-            <div class="w-full">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white" data-aos="fade-up">Education</h2>
-                <div class="max-w-3xl mx-auto space-y-8">
-                    <div class="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-xl font-semibold mb-1 text-white">Master of Science in Applied Data Science</h3>
-                        <p class="text-md font-medium text-gray-400 mb-1">Syracuse University, Syracuse, NY</p>
-                        <p class="text-sm text-gray-500">Aug 2023 – May 2025</p>
-                        <p class="text-sm text-gray-300 mt-2">GPA: 3.9/4.0</p>
-                    </div>
-                    <div class="bg-gray-900 p-6 rounded-lg shadow-md border border-gray-700" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="text-xl font-semibold mb-1 text-white">Bachelor of Engineering in Industrial Engineering and Management</h3>
-                        <p class="text-md font-medium text-gray-400 mb-1">Visvesvaraya Technological University, Bengaluru, India</p>
-                        <p class="text-sm text-gray-500">Aug 2017 – Aug 2021</p>
-                        <p class="text-sm text-gray-300 mt-2">GPA: 8.2/10</p>
-                    </div>
-                </div>
+          </article>
+
+          <!-- Portfolio DL -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="350">
+            <i class="project-card__bg-icon fas fa-chart-line" aria-hidden="true"></i>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Portfolio Management with Deep Learning</h3>
+              <ul class="project-card__list">
+                <li>Designed an LSTM-based RNN to forecast stock returns and optimize portfolio allocation.</li>
+                <li>Processed S&amp;P 500 historical price data (2007–2021) via Yahoo Finance and Quandl APIs with Python preprocessing pipelines.</li>
+                <li>Achieved significant accuracy improvements with advanced deep learning architectures and learning rate schedules.</li>
+                <li>Proposed NLP sentiment analysis and satellite imagery as alternative data sources to enhance predictive models.</li>
+              </ul>
+              <div class="project-card__tags">
+                <span class="tag">TensorFlow</span>
+                <span class="tag">LSTM</span>
+                <span class="tag">RNN</span>
+                <span class="tag">Hugging Face</span>
+                <span class="tag">Finance</span>
+              </div>
             </div>
-        </section>
- 
-        <!-- CONTACT -->
-        <section id="contact" class="py-16 md:py-24 section-bg-contrast mb-16">
-            <div class="container mx-auto px-6 w-full">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white" data-aos="fade-up">Get In Touch</h2>
-                <div class="max-w-xl mx-auto text-center">
-                    <p class="text-lg text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="100">
-                        I'm always open to discussing new opportunities and collaborations. Feel free to reach out if you'd like to connect.
-                    </p>
-                    <div data-aos="fade-up" data-aos-delay="200">
-                        <a href="mailto:akshay.joshi9904@gmail.com" class="bg-accent-color text-gray-900 font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-accent-dark hover:text-white transition duration-300 inline-block">
-                            Say Hello
-                        </a>
-                    </div>
-                    <div class="mt-10 flex justify-center space-x-6" data-aos="fade-up" data-aos-delay="300">
-                        <a href="mailto:akshay.joshi9904@gmail.com" class="text-gray-400 hover:text-accent-color transition duration-300" aria-label="Email">
-                            <i class="fas fa-envelope fa-2x"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/akshay-joshi-296743175/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent-color transition duration-300" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin fa-2x"></i>
-                        </a>
-                        <a href="https://github.com/akshay2904" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent-color transition duration-300" aria-label="GitHub">
-                            <i class="fab fa-github fa-2x"></i>
-                        </a>
-                        <a href="tel:+13158980031" class="text-gray-400 hover:text-accent-color transition duration-300" aria-label="Phone">
-                            <i class="fas fa-phone fa-2x"></i>
-                        </a>
-                    </div>
-                    <p class="text-sm text-gray-500 mt-6" data-aos="fade-up" data-aos-delay="400">New Haven, Connecticut</p>
-                </div>
+          </article>
+
+          <!-- Diabetic Retinopathy -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="400">
+            <i class="project-card__bg-icon fas fa-eye" aria-hidden="true"></i>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Diabetic Retinopathy Detection</h3>
+              <ul class="project-card__list">
+                <li>Developed an automated diabetic retinopathy detection system using CNN, achieving 94% accuracy in retinal image classification.</li>
+                <li>Implemented an optimized image preprocessing pipeline with normalization and data augmentation for model robustness.</li>
+                <li>Built a multi-stage model classifying 5 severity levels of diabetic retinopathy for early diagnosis.</li>
+                <li>Benchmarked VGG-16 vs ResNet architectures; best accuracy achieved with ResNet.</li>
+              </ul>
+              <div class="project-card__tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">CNN</span>
+                <span class="tag">ResNet</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Healthcare</span>
+              </div>
             </div>
-        </section>
- 
-    </main>
- 
-    <footer class="header-footer-bg text-gray-400 text-center py-6 mt-16 border-t">
-        <p class="text-sm">&copy; <span id="current-year"></span> Akshay Joshi. All rights reserved.</p>
-    </footer>
- 
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
- 
-    <script>
-        AOS.init({ duration: 800, once: true });
- 
-        var typedRole = new Typed('#typed-role', {
-            strings: ["Senior Data Engineer", "BI Engineer", "Data Scientist", "ML Engineer"],
-            typeSpeed: 60,
-            backSpeed: 40,
-            startDelay: 500,
-            backDelay: 2000,
-            loop: true,
-            showCursor: true,
-            cursorChar: '|',
-        });
- 
-        document.getElementById('current-year').textContent = new Date().getFullYear();
- 
-        const mobileNavButton = document.getElementById('mobile-nav-button');
-        const closeNavButton = document.getElementById('close-nav-button');
-        const mobileNavMenu = document.getElementById('mobile-nav-menu');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
- 
-        mobileNavButton.addEventListener('click', () => mobileNavMenu.classList.add('open'));
-        closeNavButton.addEventListener('click', () => mobileNavMenu.classList.remove('open'));
-        mobileNavLinks.forEach(link => link.addEventListener('click', () => mobileNavMenu.classList.remove('open')));
-        document.addEventListener('click', (event) => {
-            if (!mobileNavMenu.contains(event.target) && !mobileNavButton.contains(event.target) && mobileNavMenu.classList.contains('open')) {
-                mobileNavMenu.classList.remove('open');
-            }
-        });
-    </script>
- 
+          </article>
+
+          <!-- Cab Pricing -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="450">
+            <i class="project-card__bg-icon fas fa-taxi" aria-hidden="true"></i>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Cab Dynamic Pricing Application</h3>
+              <ul class="project-card__list">
+                <li>Developed dynamic pricing models using geospatial, weather, and demand data, achieving 85% accuracy.</li>
+                <li>Designed and deployed an interactive Streamlit front-end for real-time pricing predictions based on ride details.</li>
+                <li>Integrated user feedback loops with CI/CD pipelines for seamless model retraining and deployment.</li>
+              </ul>
+              <div class="project-card__tags">
+                <span class="tag">XGBoost</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">MLflow</span>
+                <span class="tag">Docker</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- LLM Sentiment -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="500">
+            <i class="project-card__bg-icon fas fa-comments" aria-hidden="true"></i>
+            <div class="project-card__body">
+              <h3 class="project-card__title">LLM-Powered Sentiment Analysis</h3>
+              <ul class="project-card__list">
+                <li>Leveraged Llama 3 via Hugging Face Transformers for zero-shot sentiment analysis on weather/climate-related text data.</li>
+                <li>Engineered prompts to guide the LLM for accurate positive/negative/neutral classification.</li>
+                <li>Analyzed sentiment distribution to surface public opinion trends on weather and climate discussions.</li>
+              </ul>
+              <div class="project-card__tags">
+                <span class="tag">LLM (Llama 3)</span>
+                <span class="tag">Hugging Face</span>
+                <span class="tag">Prompt Engineering</span>
+                <span class="tag">Zero-Shot</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EDUCATION ──────────────────────────────────────────────────────── -->
+    <section id="education" aria-labelledby="education-heading">
+      <div class="container section-inner">
+        <h2 id="education-heading" class="section-title" data-aos="fade-up">Education</h2>
+        <div class="education-list">
+          <div class="education-card" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="education-card__degree">Master of Science in Applied Data Science</h3>
+            <p class="education-card__school">Syracuse University, Syracuse, NY</p>
+            <p class="education-card__dates">Aug 2023 – May 2025</p>
+            <p class="education-card__gpa">GPA: 3.9 / 4.0</p>
+          </div>
+          <div class="education-card" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="education-card__degree">Bachelor of Engineering in Industrial Engineering and Management</h3>
+            <p class="education-card__school">Visvesvaraya Technological University, Bengaluru, India</p>
+            <p class="education-card__dates">Aug 2017 – Aug 2021</p>
+            <p class="education-card__gpa">GPA: 8.2 / 10</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ────────────────────────────────────────────────────────── -->
+    <section id="contact" class="section--contrast" aria-labelledby="contact-heading">
+      <div class="container section-inner">
+        <h2 id="contact-heading" class="section-title" data-aos="fade-up">Get In Touch</h2>
+        <div class="contact-wrapper">
+          <p class="contact-intro" data-aos="fade-up" data-aos-delay="100">
+            I'm always open to discussing new opportunities and collaborations. Feel free to reach out.
+          </p>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <a href="mailto:akshay.joshi9904@gmail.com" class="btn btn--primary">Say Hello</a>
+          </div>
+          <div class="contact-social" data-aos="fade-up" data-aos-delay="300">
+            <a href="mailto:akshay.joshi9904@gmail.com" class="social-link" aria-label="Email">
+              <i class="fas fa-envelope fa-2x"></i>
+            </a>
+            <a href="https://linkedin.com/in/akshay-joshi-296743175/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://github.com/akshay2904" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="tel:+13158980031" class="social-link" aria-label="Phone">
+              <i class="fas fa-phone fa-2x"></i>
+            </a>
+          </div>
+          <p class="contact-location" data-aos="fade-up" data-aos-delay="400">New Haven, Connecticut</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; <span id="current-year"></span> Akshay Joshi. All rights reserved.</p>
+  </footer>
+
+  <!-- ── Third-party JS ─────────────────────────────────────────────────── -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- ── Own Scripts (order matters) ───────────────────────────────────── -->
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/typed-init.js"></script>
+  <script src="assets/js/main.js"></script>
+
 </body>
 </html>

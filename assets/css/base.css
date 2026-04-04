@@ -1,0 +1,150 @@
+/* ==========================================================================
+   BASE — CSS Custom Properties, Reset, Typography
+   ========================================================================== */
+
+/* ── Custom Properties ─────────────────────────────────────────────────── */
+:root {
+  /* Colors */
+  --color-bg:            #000000;
+  --color-bg-elevated:   #0a0a0a;
+  --color-bg-card:       #111111;
+  --color-bg-skill:      #1f1f1f;
+  --color-bg-skill-hover:#2a2a2a;
+
+  --color-border:        #2a2a2a;
+  --color-border-mid:    #333333;
+
+  --color-text-primary:  #ffffff;
+  --color-text-body:     #e5e7eb;
+  --color-text-muted:    #d1d5db;
+  --color-text-faint:    #9ca3af;
+  --color-text-subtle:   #6b7280;
+
+  --color-accent:        #0ea5e9;
+  --color-accent-dark:   #0284c7;
+  --color-accent-dim:    rgba(14, 165, 233, 0.15);
+  --color-accent-border: rgba(14, 165, 233, 0.4);
+
+  --color-tag-bg:        rgba(30, 58, 138, 0.8);
+  --color-tag-text:      #e0f2fe;
+  --color-tag-border:    rgba(14, 165, 233, 0.5);
+
+  /* Typography */
+  --font-family:         'Inter', sans-serif;
+  --font-size-xs:        0.75rem;
+  --font-size-sm:        0.875rem;
+  --font-size-base:      1rem;
+  --font-size-lg:        1.125rem;
+  --font-size-xl:        1.25rem;
+  --font-size-2xl:       1.5rem;
+  --font-size-3xl:       1.875rem;
+  --font-size-4xl:       2.25rem;
+  --font-size-6xl:       3.75rem;
+
+  /* Spacing */
+  --space-1:   0.25rem;
+  --space-2:   0.5rem;
+  --space-3:   0.75rem;
+  --space-4:   1rem;
+  --space-6:   1.5rem;
+  --space-8:   2rem;
+  --space-10:  2.5rem;
+  --space-12:  3rem;
+  --space-16:  4rem;
+  --space-24:  6rem;
+
+  /* Radius */
+  --radius-sm:  0.375rem;
+  --radius-md:  0.5rem;
+  --radius-lg:  0.75rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm:  0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-md:  0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+
+  /* Transitions */
+  --transition-fast:   150ms ease;
+  --transition-base:   300ms ease;
+  --transition-slow:   500ms ease;
+
+  /* Z-index scale */
+  --z-base:    1;
+  --z-card-bg: 1;
+  --z-card:    10;
+  --z-nav:     40;
+  --z-header:  50;
+}
+
+/* ── Reset ──────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* ── Typography utilities ───────────────────────────────────────────────── */
+.text-accent   { color: var(--color-accent); }
+.text-primary  { color: var(--color-text-primary); }
+.text-muted    { color: var(--color-text-muted); }
+.text-faint    { color: var(--color-text-faint); }
+.text-subtle   { color: var(--color-text-subtle); }
+
+.font-semibold { font-weight: 600; }
+.font-bold     { font-weight: 700; }
+
+/* ── Typed.js cursor ────────────────────────────────────────────────────── */
+.typed-cursor {
+  opacity: 1;
+  color: var(--color-accent);
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
