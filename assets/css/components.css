@@ -1,0 +1,208 @@
+/* ==========================================================================
+   COMPONENTS — Cards, Skill Items, Badges, Tags, Buttons, Social Links
+   ========================================================================== */
+
+/* ── Buttons ────────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base);
+  border: 2px solid transparent;
+  line-height: 1;
+}
+
+.btn--primary {
+  background-color: var(--color-accent);
+  color: #111111;
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+  color: #ffffff;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-accent);
+  color: #111111;
+}
+
+/* ── Skill Item ─────────────────────────────────────────────────────────── */
+.skill-item {
+  background-color: var(--color-bg-skill);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  border: 1px solid var(--color-border-mid);
+  transition:
+    background-color var(--transition-base),
+    transform var(--transition-fast),
+    border-color var(--transition-base);
+  cursor: default;
+}
+
+.skill-item:hover {
+  background-color: var(--color-bg-skill-hover);
+  transform: scale(1.03);
+  border-color: var(--color-accent);
+}
+
+.skill-item__icon {
+  color: var(--color-accent);
+  width: 1.25rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.skill-item__label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) {
+  .skill-item__label { font-size: var(--font-size-base); }
+}
+
+/* ── Project Card ───────────────────────────────────────────────────────── */
+.project-card {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+}
+
+/* Decorative background icon */
+.project-card__bg-icon {
+  position: absolute;
+  bottom: -1.25rem;
+  right: -1.25rem;
+  font-size: 8rem;
+  color: var(--color-accent);
+  opacity: 0.08;
+  z-index: var(--z-card-bg);
+  pointer-events: none;
+  transform: rotate(-15deg);
+  user-select: none;
+}
+
+/* Content layer sits above bg icon */
+.project-card__body {
+  position: relative;
+  z-index: var(--z-card);
+  padding: var(--space-6);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(17, 17, 17, 0.85);
+}
+
+.project-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.project-card__list {
+  list-style: disc;
+  padding-left: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+  margin-bottom: var(--space-4);
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+/* ── Tag ────────────────────────────────────────────────────────────────── */
+.tag {
+  background-color: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  border: 1px solid var(--color-tag-border);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  padding: 0.15rem 0.625rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+/* ── Current Role Badge ─────────────────────────────────────────────────── */
+.badge--current {
+  background-color: var(--color-accent-dim);
+  border: 1px solid var(--color-accent-border);
+  color: var(--color-accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin-left: var(--space-2);
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Social Icon Link ───────────────────────────────────────────────────── */
+.social-link {
+  color: var(--color-text-faint);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.social-link:hover {
+  color: var(--color-accent);
+}
+
+/* ── Footer ─────────────────────────────────────────────────────────────── */
+.site-footer {
+  background-color: var(--color-bg-elevated);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  padding: var(--space-6);
+  color: var(--color-text-faint);
+  font-size: var(--font-size-sm);
+  margin-top: var(--space-16);
+}
