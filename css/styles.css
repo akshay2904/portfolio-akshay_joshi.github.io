@@ -524,9 +524,9 @@ section:last-child { border-bottom: none; }
 
 /* Logo */
 .exp-logo-box {
-    width: 56px;
-    height: 56px;
-    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
     border: 1px solid rgba(255,255,255,0.08);
     display: flex;
     align-items: center;
@@ -1023,7 +1023,7 @@ main::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radiu
     .projects-grid { grid-template-columns: 1fr; }
     .hero-bento { grid-template-columns: repeat(2, 1fr); }
     .exp-card { padding: 1.25rem; }
-    .exp-logo-box { width: 44px; height: 44px; border-radius: 9px; }
+    .exp-logo-box { width: 34px; height: 34px; border-radius: 6px; }
     .exp-company-name { font-size: 0.9rem; }
     .exp-company-line { gap: 0.4rem; }
     .contact-grid { grid-template-columns: 1fr; }
