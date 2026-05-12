@@ -253,117 +253,222 @@
             <span class="sec-num reveal">// 03</span>
             <h2 class="sec-title reveal d1">Experience</h2>
 
-            <!-- Blend360 / Capital One -->
-            <div class="exp-item reveal d2">
-                <div class="exp-meta">
-                    <span class="exp-period">Oct 2025<br>— Present</span>
-                    <div class="exp-company">Capital One via Blend360</div>
-                    <div class="exp-loc">New Haven, CT</div>
-                </div>
-                <div class="exp-content">
-                    <div class="exp-title">Senior Data Engineer</div>
-                    <ul class="exp-bullets">
-                        <li>Built cloud-native Marketing Data Platform on AWS (Glue, Lambda, Step Functions, DynamoDB, S3) handling <span class="m">terabyte-scale</span> ETL pipelines.</li>
-                        <li>Orchestrated ETL workflows via AWS Step Functions with CloudWatch monitoring and automated failure alerting, improving pipeline reliability.</li>
-                        <li>Validated Spark SQL transformations in Databricks ensuring accurate processing and production-ready dataset delivery to downstream teams.</li>
-                        <li>Optimized Spark SQL queries and partition strategies in Databricks, reducing processing time and improving large-scale analytical performance.</li>
-                        <li>Automated ETL deployments using Jenkins CI/CD pipelines improving release consistency and reducing manual intervention.</li>
-                        <li>Enforced data governance standards including schema validation and lineage tracking to prevent production defects and ensure compliance.</li>
-                        <li>Enabled data activation via Hightouch by validating Databricks datasets ensuring accurate replication to downstream marketing platforms.</li>
-                        <li>Delivered scalable dimensional datasets by translating business requirements into analytics-ready models with Product Owners and Analysts.</li>
-                        <li>Stabilized QA environment by generating synthetic test data aligned to production schemas and running validation pipelines for dataset parity.</li>
-                    </ul>
-                    <div class="exp-tags">
-                        <span class="tag">AWS Glue</span>
-                        <span class="tag">Databricks</span>
-                        <span class="tag">Spark SQL</span>
-                        <span class="tag">Step Functions</span>
-                        <span class="tag">Hightouch</span>
-                        <span class="tag">Jenkins</span>
-                        <span class="tag">Delta Lake</span>
+            <!-- Capital One via Blend360 -->
+            <div class="exp-card reveal d2">
+                <div class="exp-card-header">
+                    <div class="exp-logo-box">
+                        <svg class="exp-logo-svg" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Capital One">
+                            <rect width="56" height="56" rx="10" fill="#C3161C"/>
+                            <!-- Swoosh arc -->
+                            <path d="M11 25 C15 10 41 10 45 25" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
+                            <!-- C letterform -->
+                            <path d="M40 21 A13 13 0 1 0 40 35" stroke="white" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                        </svg>
                     </div>
+                    <div class="exp-header-details">
+                        <div class="exp-company-line">
+                            <span class="exp-company-name">Capital One</span>
+                            <span class="exp-via">via Blend360</span>
+                            <span class="exp-domain-tag financial"><i class="fas fa-chart-line"></i> Financial</span>
+                        </div>
+                        <div class="exp-role-line">
+                            <span class="exp-job-title">Senior Data Engineer</span>
+                            <span class="exp-dot">·</span>
+                            <span class="exp-emp-type">Full-time</span>
+                        </div>
+                        <div class="exp-meta-line">
+                            <i class="fas fa-calendar-alt exp-meta-icon"></i>
+                            <span class="exp-dates">Oct 2025 — Present</span>
+                            <span class="exp-dot">·</span>
+                            <i class="fas fa-map-pin exp-meta-icon"></i>
+                            <span class="exp-location">New Haven, CT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-divider-line"></div>
+
+                <ul class="exp-list">
+                    <li>Architected a cloud-native <span class="metric">Marketing Data Platform</span> on AWS — Glue, Lambda, Step Functions, DynamoDB, S3 — processing <span class="metric">terabyte-scale</span> ETL for Capital One's marketing org.</li>
+                    <li>Designed end-to-end pipeline orchestration with AWS Step Functions + CloudWatch; automated failure alerting reduced MTTR and improved reliability across production jobs.</li>
+                    <li>Boosted Spark SQL performance in Databricks through partition strategy tuning and join optimization — cutting analytical processing times on large datasets significantly.</li>
+                    <li>Enabled marketing activation via <span class="metric">Hightouch</span> by delivering schema-validated Databricks datasets with guaranteed compliance for downstream platforms.</li>
+                    <li>Standardized ETL releases via <span class="metric">Jenkins CI/CD</span>, eliminating manual deployment drift and ensuring consistent, reproducible releases.</li>
+                    <li>Enforced enterprise data governance — schema validation, lineage tracking, and access controls — preventing production defects and maintaining regulatory compliance.</li>
+                    <li>Translated complex business requirements into production-grade dimensional models, collaborating with Product Owners and Analysts on analytics-ready Spark transformations.</li>
+                    <li>Stabilized QA environments with synthetic datasets mirroring production schemas, enabling reliable pre-production validation across pipeline stages.</li>
+                </ul>
+
+                <div class="exp-tech-wrap">
+                    <span class="exp-tech-label">Stack</span>
+                    <span class="exp-tag">AWS Glue</span>
+                    <span class="exp-tag">Databricks</span>
+                    <span class="exp-tag">Spark SQL</span>
+                    <span class="exp-tag">Step Functions</span>
+                    <span class="exp-tag">Hightouch</span>
+                    <span class="exp-tag">Jenkins</span>
+                    <span class="exp-tag">Delta Lake</span>
                 </div>
             </div>
 
-            <!-- ProHealth -->
-            <div class="exp-item reveal d2">
-                <div class="exp-meta">
-                    <span class="exp-period">May 2024<br>— May 2025</span>
-                    <div class="exp-company">ProHealth Group</div>
-                    <div class="exp-loc">Birmingham, AL</div>
-                </div>
-                <div class="exp-content">
-                    <div class="exp-title">Data Engineer</div>
-                    <ul class="exp-bullets">
-                        <li>Built LLM-powered clinical note automation using LangChain &amp; AWS, reducing clinician documentation workload by <span class="m">20%</span>.</li>
-                        <li>Developed census prediction models (Prophet + NeuralProphet) achieving <span class="m">MAE of 3</span> for proactive staffing and operations planning.</li>
-                        <li>Deployed rehospitalization risk model (XGBoost + Snowflake registry) achieving <span class="m">82.5% accuracy</span>.</li>
-                        <li>Optimized ETL via fact/dimension modeling with DBT &amp; Snowflake — batch processing <span class="m">70% faster</span> via incremental strategies.</li>
-                        <li>Operationalized DBT models via GitHub CI/CD standardizing deployments and ensuring reliable, auditable pipelines for BI.</li>
-                        <li>Integrated DBT with Fivetran and migrated SQL Server data to Snowflake, ensuring <span class="m">99% reliable</span> analytics delivery.</li>
-                        <li>Engineered HIPAA-compliant Power BI dashboards tracking readmissions, operational KPIs, and regulatory compliance metrics.</li>
-                    </ul>
-                    <div class="exp-tags">
-                        <span class="tag">LangChain</span>
-                        <span class="tag">AWS</span>
-                        <span class="tag">XGBoost</span>
-                        <span class="tag">Snowflake</span>
-                        <span class="tag">DBT</span>
-                        <span class="tag">Fivetran</span>
-                        <span class="tag">Power BI</span>
+            <!-- ProHealth Group -->
+            <div class="exp-card reveal d2">
+                <div class="exp-card-header">
+                    <div class="exp-logo-box">
+                        <svg class="exp-logo-svg" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ProHealth Group">
+                            <rect width="56" height="56" rx="10" fill="#15803d"/>
+                            <!-- Medical cross -->
+                            <rect x="24" y="13" width="8" height="30" rx="2.5" fill="white"/>
+                            <rect x="13" y="24" width="30" height="8" rx="2.5" fill="white"/>
+                        </svg>
                     </div>
+                    <div class="exp-header-details">
+                        <div class="exp-company-line">
+                            <span class="exp-company-name">ProHealth Group</span>
+                            <span class="exp-domain-tag healthcare"><i class="fas fa-heartbeat"></i> Healthcare</span>
+                        </div>
+                        <div class="exp-role-line">
+                            <span class="exp-job-title">Data Engineer</span>
+                            <span class="exp-dot">·</span>
+                            <span class="exp-emp-type">Full-time</span>
+                        </div>
+                        <div class="exp-meta-line">
+                            <i class="fas fa-calendar-alt exp-meta-icon"></i>
+                            <span class="exp-dates">May 2024 — May 2025</span>
+                            <span class="exp-dot">·</span>
+                            <i class="fas fa-map-pin exp-meta-icon"></i>
+                            <span class="exp-location">Birmingham, AL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-divider-line"></div>
+
+                <ul class="exp-list">
+                    <li>Built LLM-powered clinical note automation using LangChain &amp; AWS, reducing clinician documentation workload by <span class="metric">20%</span> across care teams.</li>
+                    <li>Developed census prediction models with Prophet + NeuralProphet achieving a <span class="metric">MAE of 3</span> — enabling proactive staffing and operational planning at the facility level.</li>
+                    <li>Deployed rehospitalization risk model (XGBoost + Snowflake model registry) reaching <span class="metric">82.5% accuracy</span> for early clinical intervention workflows.</li>
+                    <li>Redesigned ETL architecture using DBT + Snowflake fact/dimension modeling — incremental strategies cut batch processing time by <span class="metric">70%</span>.</li>
+                    <li>Operationalized DBT via GitHub CI/CD, standardizing deployments and ensuring auditable, reliable pipelines across all BI consumers.</li>
+                    <li>Migrated SQL Server data to Snowflake via Fivetran + DBT, achieving <span class="metric">99% reliable</span> analytics delivery to downstream reporting teams.</li>
+                    <li>Built HIPAA-compliant Power BI dashboards tracking readmissions, operational KPIs, and regulatory metrics for clinical leadership.</li>
+                </ul>
+
+                <div class="exp-tech-wrap">
+                    <span class="exp-tech-label">Stack</span>
+                    <span class="exp-tag">LangChain</span>
+                    <span class="exp-tag">AWS</span>
+                    <span class="exp-tag">XGBoost</span>
+                    <span class="exp-tag">Snowflake</span>
+                    <span class="exp-tag">DBT</span>
+                    <span class="exp-tag">Fivetran</span>
+                    <span class="exp-tag">Power BI</span>
                 </div>
             </div>
 
             <!-- Flipkart -->
-            <div class="exp-item reveal d2">
-                <div class="exp-meta">
-                    <span class="exp-period">Feb 2023<br>— Aug 2023</span>
-                    <div class="exp-company">Flipkart</div>
-                    <div class="exp-loc">Bengaluru, India</div>
-                </div>
-                <div class="exp-content">
-                    <div class="exp-title">Data Engineer</div>
-                    <ul class="exp-bullets">
-                        <li>Reduced product return rates <span class="m">1.4%/mo</span> through data-driven experimentation and customer insight analysis.</li>
-                        <li>A/B testing + Bayesian inference for EMI strategies drove <span class="m">+16% adoption</span> and <span class="m">+8% revenue</span> in target segments.</li>
-                        <li>Automated financial data consolidation with Apache Airflow enabling real-time P&amp;L tracking across product categories.</li>
-                        <li>Enhanced VAS insurance dashboard delivering <span class="m">+7% quarterly adoption</span> and expansion to high-demand regions.</li>
-                        <li>Automated SQL query scheduling cutting reporting turnaround by <span class="m">75%</span> and enabling real-time dashboards in Looker Studio.</li>
-                        <li>Leveraged Flipkart Data Platform (FDP) to standardize pipelines and ensure consistent high-quality datasets for analytics.</li>
-                    </ul>
-                    <div class="exp-tags">
-                        <span class="tag">Airflow</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Looker Studio</span>
-                        <span class="tag">A/B Testing</span>
+            <div class="exp-card reveal d2">
+                <div class="exp-card-header">
+                    <div class="exp-logo-box">
+                        <svg class="exp-logo-svg" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flipkart">
+                            <rect width="56" height="56" rx="10" fill="#F77B00"/>
+                            <!-- F lettermark -->
+                            <rect x="16" y="13" width="6" height="30" rx="1.5" fill="white"/>
+                            <rect x="16" y="13" width="23" height="6" rx="1.5" fill="white"/>
+                            <rect x="16" y="26" width="17" height="5" rx="1.5" fill="white"/>
+                        </svg>
                     </div>
+                    <div class="exp-header-details">
+                        <div class="exp-company-line">
+                            <span class="exp-company-name">Flipkart</span>
+                            <span class="exp-domain-tag ecommerce"><i class="fas fa-shopping-bag"></i> E-commerce</span>
+                        </div>
+                        <div class="exp-role-line">
+                            <span class="exp-job-title">Data Engineer</span>
+                            <span class="exp-dot">·</span>
+                            <span class="exp-emp-type">Full-time</span>
+                        </div>
+                        <div class="exp-meta-line">
+                            <i class="fas fa-calendar-alt exp-meta-icon"></i>
+                            <span class="exp-dates">Feb 2023 — Aug 2023</span>
+                            <span class="exp-dot">·</span>
+                            <i class="fas fa-map-pin exp-meta-icon"></i>
+                            <span class="exp-location">Bengaluru, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-divider-line"></div>
+
+                <ul class="exp-list">
+                    <li>Reduced product return rates by <span class="metric">1.4% monthly</span> through data-driven experimentation and deep customer insight analysis across product categories.</li>
+                    <li>Drove <span class="metric">+16% EMI adoption</span> and <span class="metric">+8% revenue</span> in target segments via A/B testing with Bayesian inference on financial product strategies.</li>
+                    <li>Automated financial data consolidation with Apache Airflow, enabling real-time P&amp;L tracking across all product categories and merchant segments.</li>
+                    <li>Enhanced VAS insurance dashboard delivering <span class="metric">+7% quarterly adoption</span> and successful expansion to high-demand regional markets.</li>
+                    <li>Automated SQL query scheduling, cutting reporting turnaround by <span class="metric">75%</span> and powering real-time executive dashboards in Looker Studio.</li>
+                    <li>Standardized analytics pipelines on Flipkart Data Platform (FDP), ensuring consistent high-quality datasets for cross-functional analytics teams.</li>
+                </ul>
+
+                <div class="exp-tech-wrap">
+                    <span class="exp-tech-label">Stack</span>
+                    <span class="exp-tag">Airflow</span>
+                    <span class="exp-tag">SQL</span>
+                    <span class="exp-tag">Python</span>
+                    <span class="exp-tag">Looker Studio</span>
+                    <span class="exp-tag">A/B Testing</span>
+                    <span class="exp-tag">Bayesian Stats</span>
                 </div>
             </div>
 
             <!-- Storeking -->
-            <div class="exp-item reveal d2">
-                <div class="exp-meta">
-                    <span class="exp-period">Aug 2021<br>— Jan 2023</span>
-                    <div class="exp-company">Storeking</div>
-                    <div class="exp-loc">Bengaluru, India</div>
-                </div>
-                <div class="exp-content">
-                    <div class="exp-title">Data Analyst</div>
-                    <ul class="exp-bullets">
-                        <li>Built BI dashboards that reduced quarterly losses by <span class="m">2%</span> through optimized stock liquidation and demand forecasting.</li>
-                        <li>Customer behavior analysis identified regional revenue opportunities driving <span class="m">+12% MoM</span> sales growth.</li>
-                        <li>Supply chain analytics models improved fulfillment by <span class="m">4%</span> and cut procurement costs by <span class="m">12%</span>.</li>
-                        <li>Designed warehouse-level inventory dashboards improving distribution planning and stock allocation at retailer level.</li>
-                        <li>Delivered monthly brand performance reports securing promotional schemes and boosting product margins by up to <span class="m">5%</span>.</li>
-                    </ul>
-                    <div class="exp-tags">
-                        <span class="tag">SQL</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Tableau</span>
-                        <span class="tag">Supply Chain</span>
+            <div class="exp-card reveal d2">
+                <div class="exp-card-header">
+                    <div class="exp-logo-box">
+                        <svg class="exp-logo-svg" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Storeking">
+                            <rect width="56" height="56" rx="10" fill="#6d28d9"/>
+                            <!-- Crown body -->
+                            <path d="M11 35 L11 22 L21 29 L28 18 L35 29 L45 22 L45 35 Z" fill="white"/>
+                            <!-- Crown base band -->
+                            <rect x="11" y="35" width="34" height="7" rx="2" fill="white"/>
+                        </svg>
                     </div>
+                    <div class="exp-header-details">
+                        <div class="exp-company-line">
+                            <span class="exp-company-name">Storeking</span>
+                            <span class="exp-domain-tag retail"><i class="fas fa-store"></i> Retail</span>
+                        </div>
+                        <div class="exp-role-line">
+                            <span class="exp-job-title">Data Analyst</span>
+                            <span class="exp-dot">·</span>
+                            <span class="exp-emp-type">Full-time</span>
+                        </div>
+                        <div class="exp-meta-line">
+                            <i class="fas fa-calendar-alt exp-meta-icon"></i>
+                            <span class="exp-dates">Aug 2021 — Jan 2023</span>
+                            <span class="exp-dot">·</span>
+                            <i class="fas fa-map-pin exp-meta-icon"></i>
+                            <span class="exp-location">Bengaluru, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-divider-line"></div>
+
+                <ul class="exp-list">
+                    <li>Built BI dashboards reducing quarterly losses by <span class="metric">2%</span> through optimized stock liquidation strategies and demand forecasting models.</li>
+                    <li>Uncovered regional revenue opportunities via customer behavior analysis, driving <span class="metric">+12% MoM</span> sales growth across key markets.</li>
+                    <li>Built supply chain analytics models improving fulfillment efficiency by <span class="metric">4%</span> and cutting procurement costs by <span class="metric">12%</span>.</li>
+                    <li>Designed warehouse-level inventory dashboards improving distribution planning and stock allocation accuracy at the retailer level.</li>
+                    <li>Delivered monthly brand performance reports that secured promotional schemes and boosted product margins by up to <span class="metric">5%</span>.</li>
+                </ul>
+
+                <div class="exp-tech-wrap">
+                    <span class="exp-tech-label">Stack</span>
+                    <span class="exp-tag">SQL</span>
+                    <span class="exp-tag">Python</span>
+                    <span class="exp-tag">Tableau</span>
+                    <span class="exp-tag">Power BI</span>
+                    <span class="exp-tag">Supply Chain Analytics</span>
                 </div>
             </div>
         </section>
@@ -443,10 +548,7 @@
                         <div class="edu-degree">Master of Science — Applied Data Science</div>
                         <div class="edu-school">Syracuse University · Syracuse, NY</div>
                         <div class="edu-year">Aug 2023 – May 2025</div>
-                        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-                            <span class="edu-gpa"><i class="fas fa-star" style="font-size:0.55rem;"></i> 3.9 / 4.0</span>
-                            <span style="display:inline-flex;align-items:center;gap:0.25rem;padding:0.18rem 0.55rem;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:5px;font-size:0.68rem;color:var(--muted);">Real-Time Systems · Predictive Modeling</span>
-                        </div>
+                        <span class="edu-gpa"><i class="fas fa-star" style="font-size:0.55rem;"></i> 3.9 / 4.0</span>
                     </div>
                 </div>
                 <div class="edu-card reveal d3">
